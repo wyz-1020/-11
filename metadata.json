@@ -1,0 +1,5 @@
+{
+  "name": "数学星级挑战",
+  "description": "一个带有时间锁机制的数学题目挑战系统，支持 AI 自动生成结构化解析。",
+  "requestFramePermissions": ["camera"]
+}
