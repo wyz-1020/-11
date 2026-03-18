@@ -64,13 +64,18 @@ export default function App() {
       currentProblems = JSON.parse(saved);
     }
 
-    // Ensure the 3月18日 problem exists (for the user's request)
-    const seedId = 'seed-problem-1';
-    const hasSeed = currentProblems.some(p => p.id === seedId || p.title === '3月18日');
+    // Ensure the seed problems exist
+    const seed1Id = 'seed-problem-1';
+    const seed2Id = 'seed-problem-2';
+    const hasSeed1 = currentProblems.some(p => p.id === seed1Id || p.title === '3月18日');
+    const hasSeed2 = currentProblems.some(p => p.id === seed2Id || p.title === '3月19日');
     
-    if (!hasSeed) {
-      const initialProblem: MathProblem = {
-        id: seedId,
+    let updatedProblems = [...currentProblems];
+    let needsUpdate = false;
+
+    if (!hasSeed1) {
+      const initialProblem1: MathProblem = {
+        id: seed1Id,
         date: '2026-03-18',
         title: '3月18日',
         unlockTime: '14:00',
@@ -107,11 +112,62 @@ $88893 - 5 = 88888$
           }
         ]
       };
-      currentProblems = [initialProblem, ...currentProblems];
-      localStorage.setItem('math_problems', JSON.stringify(currentProblems));
+      updatedProblems = [initialProblem1, ...updatedProblems];
+      needsUpdate = true;
+    }
+
+    if (!hasSeed2) {
+      const initialProblem2: MathProblem = {
+        id: seed2Id,
+        date: '2026-03-19',
+        title: '3月19日',
+        unlockTime: '14:00',
+        createdAt: Date.now() + 1000, // Ensure different timestamp
+        problems: [
+          {
+            id: 'sub-2',
+            content: `在 $\\bigcirc$ 里填上适当的运算符号，使等号两边相等：
+1. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 1$
+2. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 2$
+3. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 3$
+4. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 7$
+5. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 8$
+6. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 9$`,
+            difficulty: 1,
+            solution: `## 【解析与答案】
+本题考查的是算式谜（巧填算符）。我们需要通过尝试加、减、乘、除以及括号，使等式成立。
+
+1. **结果为 1**：
+   $3 \\div 3 + 3 - 3 = 1$ 或 $(3 + 3) \\div (3 + 3) = 1$
+2. **结果为 2**：
+   $3 \\div 3 + 3 \\div 3 = 2$
+3. **结果为 3**：
+   $3 \\times 3 - 3 - 3 = 3$ 或 $3 + 3 - 3 \\times (3 \\div 3) = 3$
+4. **结果为 7**：
+   $3 + 3 + 3 \\div 3 = 7$
+5. **结果为 8**：
+   $3 \\times 3 - 3 \\div 3 = 8$
+6. **结果为 9**：
+   $3 \\times 3 + 3 - 3 = 9$ 或 $3 \\times 3 \\div 3 \\times 3 = 9$
+
+---
+**技巧总结**：
+- 看到结果较小时，多考虑除法和减法。
+- 看到结果接近某个数的倍数时，考虑乘法。
+- 灵活运用括号改变运算顺序。`
+          }
+        ]
+      };
+      updatedProblems = [initialProblem2, ...updatedProblems];
+      needsUpdate = true;
     }
     
-    setProblems(currentProblems);
+    if (needsUpdate) {
+      localStorage.setItem('math_problems', JSON.stringify(updatedProblems));
+      setProblems(updatedProblems);
+    } else {
+      setProblems(currentProblems);
+    }
 
     // Update time every minute
     const timer = setInterval(() => setCurrentTime(new Date()), 60000);
