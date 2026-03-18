@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { MathProblem, ViewMode } from './types';
-import { generateMathSolution } from './services/geminiService';
+import { generateMathSolution } from './services/aiService';
 import { 
   BookOpen, 
   Plus, 
@@ -182,9 +182,12 @@ export default function App() {
       setNewTitle('');
       setSubProblems([{ id: crypto.randomUUID(), content: '', imageUrl: null, difficulty: 3 }]);
       setActiveSubProblemId(subProblems[0].id);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error generating solution:', error);
-      alert('生成解答失败，请检查 API Key 配置。');
+      const errorMessage = error.message?.includes('API Key') 
+        ? '未检测到 API Key。请点击左侧“设置”菜单，在 Secrets 中配置 DASHSCOPE_API_KEY。' 
+        : '生成解答失败，请检查网络或 API 配置。';
+      alert(errorMessage);
     } finally {
       setIsGenerating(false);
     }
