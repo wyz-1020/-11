@@ -58,9 +58,60 @@ export default function App() {
   // Load data from localStorage
   useEffect(() => {
     const saved = localStorage.getItem('math_problems');
+    let currentProblems: MathProblem[] = [];
+    
     if (saved) {
-      setProblems(JSON.parse(saved));
+      currentProblems = JSON.parse(saved);
     }
+
+    // Ensure the 3月18日 problem exists (for the user's request)
+    const seedId = 'seed-problem-1';
+    const hasSeed = currentProblems.some(p => p.id === seedId || p.title === '3月18日');
+    
+    if (!hasSeed) {
+      const initialProblem: MathProblem = {
+        id: seedId,
+        date: '2026-03-18',
+        title: '3月18日',
+        unlockTime: '14:00',
+        createdAt: Date.now(),
+        problems: [
+          {
+            id: 'sub-1',
+            content: '计算：$99999 - 9999 - 999 - 99 - 9 - 5$',
+            difficulty: 3,
+            solution: `## 【第一步：审题与分析】
+题目要求计算：$99999 - 9999 - 999 - 99 - 9 - 5$。
+观察减数发现，它们都是由数字“9”组成的，非常接近整十、整百、整千、整万。我们可以利用“凑整法”来简化计算。
+
+## 【第二步：计算推导】
+**方法一：凑整巧算法**
+我们将减数分别看作 $(10000-1)$、$(1000-1)$、$(100-1)$ 和 $(10-1)$：
+原式 $= 99999 - (10000 - 1) - (1000 - 1) - (100 - 1) - (10 - 1) - 5$
+去括号（注意减法括号前是减号，括号内要变号）：
+$= 99999 - 10000 + 1 - 1000 + 1 - 100 + 1 - 10 + 1 - 5$
+$= 89999 - 1000 - 100 - 10 + 4 - 5$
+$= 88889 + 4 - 5$
+$= 88888$
+
+**方法二：逐级相减法**
+$99999 - 9999 = 90000$
+$90000 - 999 = 89001$
+$89001 - 99 = 88902$
+$88902 - 9 = 88893$
+$88893 - 5 = 88888$
+
+## 【第三步：总结】
+最终计算结果为 **88888**。
+在巧算过程中，最关键的是去括号时的符号处理，即“减去一个差等于减去被减数加上减数”。`
+          }
+        ]
+      };
+      currentProblems = [initialProblem, ...currentProblems];
+      localStorage.setItem('math_problems', JSON.stringify(currentProblems));
+    }
+    
+    setProblems(currentProblems);
 
     // Update time every minute
     const timer = setInterval(() => setCurrentTime(new Date()), 60000);
@@ -341,14 +392,14 @@ export default function App() {
                       <div className="pt-4">
                         <div className="flex items-center justify-between mb-4">
                           <h4 className="text-sm font-bold text-slate-600 flex items-center gap-2">
-                            {isUnlocked(selectedProblem) ? (
+                            {(isUnlocked(selectedProblem) || viewMode === 'teacher') ? (
                               <Unlock className="text-green-500" size={16} />
                             ) : (
                               <Lock className="text-amber-500" size={16} />
                             )}
                             本题解析
                           </h4>
-                          {!isUnlocked(selectedProblem) && index === 0 && (
+                          {!(isUnlocked(selectedProblem) || viewMode === 'teacher') && index === 0 && (
                             <span className="text-[10px] font-medium text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full flex items-center gap-1">
                               <Clock size={10} />
                               {selectedProblem.unlockTime} 解锁
@@ -356,7 +407,7 @@ export default function App() {
                           )}
                         </div>
 
-                        {isUnlocked(selectedProblem) ? (
+                        {(isUnlocked(selectedProblem) || viewMode === 'teacher') ? (
                           <div className="markdown-body bg-slate-50 rounded-xl p-6 border border-slate-200">
                             <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                               {prob.solution || ''}
