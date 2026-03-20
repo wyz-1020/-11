@@ -67,8 +67,10 @@ export default function App() {
     // Ensure the seed problems exist
     const seed1Id = 'seed-problem-1';
     const seed2Id = 'seed-problem-2';
+    const seed3Id = 'seed-problem-3';
     const hasSeed1 = currentProblems.some(p => p.id === seed1Id || p.title === '3月18日');
     const hasSeed2 = currentProblems.some(p => p.id === seed2Id || p.title === '3月19日');
+    const hasSeed3 = currentProblems.some(p => p.id === seed3Id || p.title === '3月20日');
     
     let updatedProblems = [...currentProblems];
     let needsUpdate = false;
@@ -159,6 +161,63 @@ $88893 - 5 = 88888$
         ]
       };
       updatedProblems = [initialProblem2, ...updatedProblems];
+      needsUpdate = true;
+    }
+
+    if (!hasSeed3) {
+      const initialProblem3: MathProblem = {
+        id: seed3Id,
+        date: '2026-03-20',
+        title: '3月20日',
+        unlockTime: '14:00',
+        createdAt: Date.now() + 2000,
+        problems: [
+          {
+            id: 'sub-3',
+            content: `如图，四张卡片上各有一个数，这四个数的乘积末尾有 6 个 0，那么第一张卡片上的数最小是多少？
+            
+| ? | 25 | 125 | 80 |`,
+            difficulty: 3,
+            solution: `## 【第一步：审题与分析】
+题目要求四个数的乘积末尾有 6 个 0。
+在四年级下册，我们学习了乘法结合律和一些“好朋友数”：
+- $25 \times 4 = 100$（末尾有 2 个 0）
+- $125 \times 8 = 1000$（末尾有 3 个 0）
+
+我们可以利用这些知识，先算出已知三张卡片的乘积末尾有多少个 0。
+
+## 【第二步：计算已知卡片的乘积】
+已知卡片是：25、125、80。
+我们把 80 拆开看：$80 = 8 \times 10$。
+利用乘法交换律和结合律：
+$25 \times 125 \times 80$
+$= 25 \times 125 \times 8 \times 10$
+$= 25 \times (125 \times 8) \times 10$
+$= 25 \times 1000 \times 10$
+$= 250000$
+
+我们发现，这三张卡片的乘积是 **250000**，末尾已经有 **4 个 0** 了。
+
+## 【第三步：推理与计算】
+目标是末尾有 **6 个 0**，现在已经有 4 个了，还差 **2 个 0**。
+也就是说，第一张卡片上的数与 250000 相乘，需要再产生 2 个 0。
+
+观察 250000，我们可以把它看作 $25 \times 10000$。
+要让乘积再多出 2 个 0，其实就是看 $25 \times ?$ 什么时候末尾会出现两个 0。
+根据“好朋友数”：$25 \times 4 = 100$。
+
+所以，$250000 \times 4 = 1000000$（正好 6 个 0）。
+
+## 【结论】
+第一张卡片上的数最小是 **4**。
+
+---
+**技巧总结**：
+利用乘法结合律，找 25 和 4、125 和 8 这样的“好朋友”，可以快速判断乘积末尾 0 的个数。`
+          }
+        ]
+      };
+      updatedProblems = [initialProblem3, ...updatedProblems];
       needsUpdate = true;
     }
     
