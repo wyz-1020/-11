@@ -68,7 +68,7 @@ export default function App() {
     const seed1Id = 'seed-problem-1';
     const seed2Id = 'seed-problem-2';
     const seed3Id = 'seed-problem-3';
-    const seed4Id = 'seed-problem-4-v8'; // Incremented version to ensure fresh seed
+    const seed4Id = 'seed-problem-4-v9'; // Incremented version to ensure fresh seed
     
     const hasSeed1 = currentProblems.some(p => p.id === seed1Id || p.title === '3月18日');
     const hasSeed2 = currentProblems.some(p => p.id === seed2Id || p.title === '3月19日');
@@ -141,8 +141,8 @@ export default function App() {
     if (!hasSeed4) {
       const initialProblem4: MathProblem = {
         id: seed4Id,
-        date: '2026-03-23',
-        title: '3月23日挑战',
+        date: '2026-03-24',
+        title: '3月24日挑战',
         unlockTime: '14:00',
         createdAt: Date.now() + 3000,
         problems: [
