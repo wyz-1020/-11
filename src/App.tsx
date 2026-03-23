@@ -68,9 +68,12 @@ export default function App() {
     const seed1Id = 'seed-problem-1';
     const seed2Id = 'seed-problem-2';
     const seed3Id = 'seed-problem-3';
+    const seed4Id = 'seed-problem-4-v8'; // Incremented version to ensure fresh seed
+    
     const hasSeed1 = currentProblems.some(p => p.id === seed1Id || p.title === '3月18日');
     const hasSeed2 = currentProblems.some(p => p.id === seed2Id || p.title === '3月19日');
     const hasSeed3 = currentProblems.some(p => p.id === seed3Id || p.title === '3月20日');
+    const hasSeed4 = currentProblems.some(p => p.id === seed4Id || p.title === '3月23日挑战');
     
     let updatedProblems = [...currentProblems];
     let needsUpdate = false;
@@ -87,34 +90,11 @@ export default function App() {
             id: 'sub-1',
             content: '计算：$99999 - 9999 - 999 - 99 - 9 - 5$',
             difficulty: 3,
-            solution: `## 【第一步：审题与分析】
-题目要求计算：$99999 - 9999 - 999 - 99 - 9 - 5$。
-观察减数发现，它们都是由数字“9”组成的，非常接近整十、整百、整千、整万。我们可以利用“凑整法”来简化计算。
-
-## 【第二步：计算推导】
-**方法一：凑整巧算法**
-我们将减数分别看作 $(10000-1)$、$(1000-1)$、$(100-1)$ 和 $(10-1)$：
-原式 $= 99999 - (10000 - 1) - (1000 - 1) - (100 - 1) - (10 - 1) - 5$
-去括号（注意减法括号前是减号，括号内要变号）：
-$= 99999 - 10000 + 1 - 1000 + 1 - 100 + 1 - 10 + 1 - 5$
-$= 89999 - 1000 - 100 - 10 + 4 - 5$
-$= 88889 + 4 - 5$
-$= 88888$
-
-**方法二：逐级相减法**
-$99999 - 9999 = 90000$
-$90000 - 999 = 89001$
-$89001 - 99 = 88902$
-$88902 - 9 = 88893$
-$88893 - 5 = 88888$
-
-## 【第三步：总结】
-最终计算结果为 **88888**。
-在巧算过程中，最关键的是去括号时的符号处理，即“减去一个差等于减去被减数加上减数”。`
+            solution: `## 【第一步：审题与分析】\n题目要求计算：$99999 - 9999 - 999 - 99 - 9 - 5$。\n观察减数发现，它们都是由数字“9”组成的，非常接近整十、整百、整千、整万。我们可以利用“凑整法”来简化计算。\n\n## 【第二步：计算推导】\n**方法一：凑整巧算法**\n我们将减数分别看作 $(10000-1)$、$(1000-1)$、$(100-1)$ 和 $(10-1)$：\n原式 $= 99999 - (10000 - 1) - (1000 - 1) - (100 - 1) - (10 - 1) - 5$\n去括号（注意减法括号前是减号，括号内要变号）：\n$= 99999 - 10000 + 1 - 1000 + 1 - 100 + 1 - 10 + 1 - 5$\n$= 89999 - 1000 - 100 - 10 + 4 - 5$\n$= 88889 + 4 - 5$\n$= 88888$\n\n**方法二：逐级相减法**\n$99999 - 9999 = 90000$\n$90000 - 999 = 89001$\n$89001 - 99 = 88902$\n$88902 - 9 = 88893$\n$88893 - 5 = 88888$\n\n## 【第三步：总结】\n最终计算结果为 **88888**。\n在巧算过程中，最关键的是去括号时的符号处理，即“减去一个差等于减去被减数加上减数”。`
           }
         ]
       };
-      updatedProblems = [initialProblem1, ...updatedProblems];
+      updatedProblems.push(initialProblem1);
       needsUpdate = true;
     }
 
@@ -124,43 +104,17 @@ $88893 - 5 = 88888$
         date: '2026-03-19',
         title: '3月19日',
         unlockTime: '14:00',
-        createdAt: Date.now() + 1000, // Ensure different timestamp
+        createdAt: Date.now() + 1000,
         problems: [
           {
             id: 'sub-2',
-            content: `在 $\\bigcirc$ 里填上适当的运算符号，使等号两边相等：
-1. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 1$
-2. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 2$
-3. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 3$
-4. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 7$
-5. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 8$
-6. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 9$`,
+            content: `在 $\\bigcirc$ 里填上适当的运算符号，使等号两边相等：\n1. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 1$\n2. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 2$\n3. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 3$\n4. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 7$\n5. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 8$\n6. $3 \\bigcirc 3 \\bigcirc 3 \\bigcirc 3 = 9$`,
             difficulty: 1,
-            solution: `## 【解析与答案】
-本题考查的是算式谜（巧填算符）。我们需要通过尝试加、减、乘、除以及括号，使等式成立。
-
-1. **结果为 1**：
-   $3 \\div 3 + 3 - 3 = 1$ 或 $(3 + 3) \\div (3 + 3) = 1$
-2. **结果为 2**：
-   $3 \\div 3 + 3 \\div 3 = 2$
-3. **结果为 3**：
-   $3 \\times 3 - 3 - 3 = 3$ 或 $3 + 3 - 3 \\times (3 \\div 3) = 3$
-4. **结果为 7**：
-   $3 + 3 + 3 \\div 3 = 7$
-5. **结果为 8**：
-   $3 \\times 3 - 3 \\div 3 = 8$
-6. **结果为 9**：
-   $3 \\times 3 + 3 - 3 = 9$ 或 $3 \\times 3 \\div 3 \\times 3 = 9$
-
----
-**技巧总结**：
-- 看到结果较小时，多考虑除法和减法。
-- 看到结果接近某个数的倍数时，考虑乘法。
-- 灵活运用括号改变运算顺序。`
+            solution: `## 【参考答案】\n1. $(3 + 3) \\div (3 + 3) = 1$ 或 $3 \\div 3 + 3 - 3 = 1$\n2. $3 \\div 3 + 3 \\div 3 = 2$\n3. $(3 + 3 + 3) \\div 3 = 3$\n4. $3 + 3 + 3 \\div 3 = 7$\n5. $3 \\times 3 - 3 \\div 3 = 8$\n6. $3 \\times 3 + 3 - 3 = 9$\n\n## 【技巧总结】\n- 看到结果较小时，多考虑除法和减法。\n- 看到结果接近某个数的倍数时，考虑乘法。\n- 灵活运用括号改变运算顺序。`
           }
         ]
       };
-      updatedProblems = [initialProblem2, ...updatedProblems];
+      updatedProblems.push(initialProblem2);
       needsUpdate = true;
     }
 
@@ -174,54 +128,46 @@ $88893 - 5 = 88888$
         problems: [
           {
             id: 'sub-3',
-            content: `如图，四张卡片上各有一个数，这四个数的乘积末尾有 6 个 0，那么第一张卡片上的数最小是多少？
-            
-| ? | 25 | 125 | 80 |`,
+            content: `如图，四张卡片上各有一个数，这四个数的乘积末尾有 6 个 0，那么第一张卡片上的数最小是多少？\n\n| ? | 25 | 125 | 80 |`,
             difficulty: 3,
-            solution: `## 【第一步：审题与分析】
-题目要求四个数的乘积末尾有 6 个 0。
-在四年级下册，我们学习了乘法结合律和一些“好朋友数”：
-- $25 \times 4 = 100$（末尾有 2 个 0）
-- $125 \times 8 = 1000$（末尾有 3 个 0）
-
-我们可以利用这些知识，先算出已知三张卡片的乘积末尾有多少个 0。
-
-## 【第二步：计算已知卡片的乘积】
-已知卡片是：25、125、80。
-我们把 80 拆开看：$80 = 8 \times 10$。
-利用乘法交换律和结合律：
-$25 \times 125 \times 80$
-$= 25 \times 125 \times 8 \times 10$
-$= 25 \times (125 \times 8) \times 10$
-$= 25 \times 1000 \times 10$
-$= 250000$
-
-我们发现，这三张卡片的乘积是 **250000**，末尾已经有 **4 个 0** 了。
-
-## 【第三步：推理与计算】
-目标是末尾有 **6 个 0**，现在已经有 4 个了，还差 **2 个 0**。
-也就是说，第一张卡片上的数与 250000 相乘，需要再产生 2 个 0。
-
-观察 250000，我们可以把它看作 $25 \times 10000$。
-要让乘积再多出 2 个 0，其实就是看 $25 \times ?$ 什么时候末尾会出现两个 0。
-根据“好朋友数”：$25 \times 4 = 100$。
-
-所以，$250000 \times 4 = 1000000$（正好 6 个 0）。
-
-## 【结论】
-第一张卡片上的数最小是 **4**。
-
----
-**技巧总结**：
-利用乘法结合律，找 25 和 4、125 和 8 这样的“好朋友”，可以快速判断乘积末尾 0 的个数。`
+            solution: `## 【第一步：审题与分析】\n题目要求四个数的乘积末尾有 6 个 0。\n在四年级下册，我们学习了乘法结合律 and 一些“好朋友数”：\n- $25 \\times 4 = 100$（末尾有 2 个 0）\n- $125 \\times 8 = 1000$（末尾有 3 个 0）\n\n我们可以利用这些知识，先算出已知三张卡片的乘积末尾有多少个 0。\n\n## 【第二步：计算已知卡片的乘积】\n已知卡片是：25、125、80。\n我们把 80 拆开看：$80 = 8 \\times 10$。\n利用乘法交换律和结合律：\n$25 \\times 125 \\times 80$\n$= 25 \\times 125 \\times 8 \\times 10$\n$= 25 \\times (125 \\times 8) \\times 10$\n$= 25 \\times 1000 \\times 10$\n$= 250000$\n\n我们发现，这三张卡片的乘积是 **250000**，末尾已经有 **4 个 0** 了。\n\n## 【第三步：推理与计算】\n目标是末尾有 **6 个 0**，现在已经有 4 个了，还差 **2 个 0**。\n也就是说，第一张卡片上的数与 250000 相乘，需要再产生 2 个 0。\n\n观察 250000，我们可以把它看作 $25 \\times 10000$。\n要让乘积再多出 2 个 0，其实就是看 $25 \\times ?$ 什么时候末尾会出现两个 0。\n根据“好朋友数”：$25 \\times 4 = 100$。\n\n所以，$250000 \\times 4 = 1000000$（正好 6 个 0）。\n\n## 【结论】\n第一张卡片上的数最小是 **4**。\n\n---\n**技巧总结**：\n利用乘法结合律，找 25 和 4、125 和 8 这样的“好朋友”，可以快速判断乘积末尾 0 的个数。`
           }
         ]
       };
-      updatedProblems = [initialProblem3, ...updatedProblems];
+      updatedProblems.push(initialProblem3);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed4) {
+      const initialProblem4: MathProblem = {
+        id: seed4Id,
+        date: '2026-03-23',
+        title: '3月23日挑战',
+        unlockTime: '14:00',
+        createdAt: Date.now() + 3000,
+        problems: [
+          {
+            id: 'sub-4-1',
+            content: '乐乐在计算 $\\triangle + 5 \\times 8$ 时，先算了 $\\triangle + 5$，最后算的乘法。他得到的结果比正确结果多了 42，正确的结果是 ( )。',
+            difficulty: 3,
+            solution: `## 【第一步：审题与分析】\n题目描述了乐乐在计算时改变了运算顺序。\n- 正确的运算顺序：先算乘法，再算加法。\n- 乐乐的运算顺序：先算加法，再算乘法。\n\n## 【第二步：列式推导】\n1. **乐乐的计算过程**：\n   先算 $\\triangle + 5$，再乘 8，即：$(\\triangle + 5) \\times 8$。\n   利用乘法分配律展开：$8 \\times \\triangle + 40$。\n\n2. **正确的计算过程**：\n   先算 $5 \\times 8 = 40$，再加 $\\triangle$，即：$\\triangle + 40$。\n\n3. **比较两个结果**：\n   乐乐的结果 - 正确的结果 = 42\n   $(8 \\times \\triangle + 40) - (\\triangle + 40) = 42$\n   $7 \\times \\triangle = 42$\n   $\\triangle = 6$\n\n## 【第三步：求正确结果】\n将 $\\triangle = 6$ 代入正确的算式中：\n$6 + 5 \\times 8 = 6 + 40 = 46$\n\n## 【结论】\n正确的结果是 **46**。`
+          },
+          {
+            id: 'sub-4-2',
+            content: `5. 新素养 几何直观 春风拂新意，赏荷正当时。下面是一块荷塘地的示意图，小红想要计算这块地的面积，她认为可以这样计算：$30 \\times (18 + 42) = 30 \\times 60 = 1800 (m^2)$。她的想法对吗？请说明理由。`,
+            imageUrl: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSA0MCA0MCBMIDEwMCA0MCBMIDEwMCA4MCBMIDE2MCA4MCBMIDE2MCAxNjAgTCA0MCAxNjAgWiIgZmlsbD0iI2UwZjJmMSIgc3Ryb2tlPSIjMDA3OTZiIiBzdHJva2Utd2lkdGg9IjIiIC8+PHRleHQgeD0iNzAiIHk9IjM1IiBmb250LXNpemU9IjEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4zMCBtPC90ZXh0Pjx0ZXh0IHg9IjM1IiB5PSI2MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9ImVuZCI+MTggbTwvdGV4dD48dGV4dCB4PSIzNSIgeT0iMTIwIiBmb250LXNpemU9IjEyIiB0ZXh0LWFuY2hvcj0iZW5kIj4zMCBtPC90ZXh0Pjx0ZXh0IHg9IjEwMCIgeT0iMTc1IiBmb250LXNpemU9IjEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj40MiBtPC90ZXh0PjxsaW5lIHgxPSI0MCIgeTE9IjMwIiB4Mj0iMTAwIiB5Mj0iMzAiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIiAvPjxsaW5lIHgxPSI0MCIgeTE9IjI1IiB4Mj0iNDAiIHkyPSIzNSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiIC8+PGxpbmUgeDE9IjEwMCIgeTE9IjI1IiB4Mj0iMTAwIiB5Mj0iMzUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIiAvPjxsaW5lIHgxPSIyNSIgeTE9IjQwIiB4Mj0iMjUiIHkyPSI4MCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiIC8+PGxpbmUgeDE9IjIwIiB5MT0iNDAiIHgyPSIzMCIgeTI9IjQwIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMSIgLz48bGluZSB4MT0iMjAiIHkxPSI4MCIgeDI9IjMwIiB5Mj0iODAiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIiAvPjxsaW5lIHgxPSIyNSIgeTE9IjgwIiB4Mj0iMjUiIHkyPSIxNjAiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIiAvPjxsaW5lIHgxPSIyMCIgeTE9IjE2MCIgeDI9IjMwIiB5Mj0iMTYwIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMSIgLz48bGluZSB4MT0iNDAiIHkxPSIxNzAiIHgyPSIxNjAiIHkyPSIxNzAiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIiAvPjxsaW5lIHgxPSI0MCIgeTE9IjE2NSIgeDI9IjQwIiB5Mj0iMTc1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMSIgLz48bGluZSB4MT0iMTYwIiB5MT0iMTY1IiB4Mj0iMTYwIiB5Mj0iMTc1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMSIgLz48L3N2Zz4=',
+            difficulty: 2,
+            solution: `## 【结论】\n小红的想法是**正确**的。\n\n## 【理由分析】\n我们可以通过“割补法”或者“拆分法”来观察这个图形：\n\n1. **水平拆分**：\n   将这个不规则图形水平切开，分成上下两个长方形：\n   - **上部长方形**：宽为 $30\\text{ m}$，高为 $18\\text{ m}$，面积为 $30 \\times 18$。\n   - **下部长方形**：宽为 $42\\text{ m}$，高为 $30\\text{ m}$，面积为 $42 \\times 30$。\n\n2. **计算总面积**：\n   总面积 = $30 \\times 18 + 42 \\times 30$\n\n3. **运用乘法分配律**：\n   观察算式 $30 \\times 18 + 42 \\times 30$，两个乘法算式中都有因数 $30$。\n   根据乘法分配律：$a \\times b + c \\times a = a \\times (b + c)$\n   所以：$30 \\times 18 + 42 \\times 30 = 30 \\times (18 + 42)$\n\n4. **验证结果**：\n   $30 \\times (18 + 42) = 30 \\times 60 = 1800 (m^2)$。\n\n这与小红的计算方法完全一致，说明小红巧妙地运用了乘法分配律来简化计算。`
+          }
+        ]
+      };
+      updatedProblems.push(initialProblem4);
       needsUpdate = true;
     }
     
     if (needsUpdate) {
+      // Sort by date descending
+      updatedProblems.sort((a, b) => b.date.localeCompare(a.date));
       localStorage.setItem('math_problems', JSON.stringify(updatedProblems));
       setProblems(updatedProblems);
     } else {
