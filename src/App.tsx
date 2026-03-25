@@ -419,9 +419,9 @@ export default function App() {
                 </div>
                 <h2 className="text-3xl font-bold text-slate-900 mb-8">{selectedProblem.title}</h2>
                 
-                <div className="space-y-12">
+                <div className="space-y-8">
                   {selectedProblem.problems.map((prob, index) => (
-                    <div key={prob.id} className="relative pl-8 border-l-2 border-slate-100 pb-4">
+                    <div key={prob.id} className="relative pl-8 border-l-2 border-slate-100 pb-2">
                       <div className="absolute -left-[11px] top-0 w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center text-[10px] text-white font-bold">
                         {index + 1}
                       </div>
@@ -433,7 +433,7 @@ export default function App() {
                         </div>
 
                         {prob.imageUrl && (
-                          <div className="mb-6 rounded-xl overflow-hidden border border-slate-100 shadow-sm max-w-md">
+                          <div className="mb-4 rounded-xl overflow-hidden border border-slate-100 shadow-sm max-w-xs">
                             <img 
                               src={prob.imageUrl} 
                               alt={`题目 ${index + 1} 图片`} 
@@ -443,7 +443,7 @@ export default function App() {
                           </div>
                         )}
 
-                        <div className="prose prose-slate max-w-none mb-6">
+                        <div className="prose prose-slate prose-lg max-w-none mb-4">
                           <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
                             {prob.content}
                           </ReactMarkdown>
