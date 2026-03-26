@@ -69,11 +69,13 @@ export default function App() {
     const seed2Id = 'seed-problem-2';
     const seed3Id = 'seed-problem-3';
     const seed4Id = 'seed-problem-4-v12'; // Incremented version to ensure fresh seed
+    const seed5Id = 'seed-problem-5-v3'; // New challenge for March 26th
     
     const hasSeed1 = currentProblems.some(p => p.id === seed1Id || p.title === '3月18日');
     const hasSeed2 = currentProblems.some(p => p.id === seed2Id || p.title === '3月19日');
     const hasSeed3 = currentProblems.some(p => p.id === seed3Id || p.title === '3月20日');
-    const hasSeed4 = currentProblems.some(p => p.id === seed4Id || p.title === '3月23日挑战');
+    const hasSeed4 = currentProblems.some(p => p.id === seed4Id || p.title === '3月25日');
+    const hasSeed5 = currentProblems.some(p => p.id === seed5Id || p.title === '3月26日');
     
     let updatedProblems = [...currentProblems];
     let needsUpdate = false;
@@ -162,6 +164,27 @@ export default function App() {
         ]
       };
       updatedProblems.push(initialProblem4);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed5) {
+      const initialProblem5: MathProblem = {
+        id: seed5Id,
+        date: '2026-03-26',
+        title: '3月26日',
+        unlockTime: '14:00',
+        createdAt: Date.now() + 4000,
+        problems: [
+          {
+            id: 'sub-5-1',
+            content: '观察下面的图形等式，求出三角形、正方形和圆圈各代表多少？',
+            imageUrl: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjM2MCIgdmlld0JveD0iMCAwIDYwMCAzNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSIzNjAiIGZpbGw9IiNmZmZmZmYiIC8+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTAwLCA0MCkiPgogICAgPHBhdGggZD0iTSAyMCAwIEwgNDAgMzUgTCAwIDM1IFoiIGZpbGw9IiNmZmY5YzQiIHN0cm9rZT0iI2ZiYzAyZCIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogICAgPHRleHQgeD0iNTUiIHk9IjI1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM5NGEzYjgiPis8L3RleHQ+CiAgICA8cGF0aCBkPSJNIDkwIDAgTCAxMTAgMzUgTCA3MCAzNSBaIiBmaWxsPSIjZmZmOWM0IiBzdHJva2U9IiNmYmMwMmQiIHN0cm9rZS13aWR0aD0iMiIgLz4KICAgIDx0ZXh0IHg9IjEzNSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzk0YTNiOCI+PTwvdGV4dD4KICAgIDxyZWN0IHg9IjE3MCIgeT0iMCIgd2lkdGg9IjM1IiBoZWlnaHQ9IjM1IiByeD0iNiIgZmlsbD0iI2YzZTVmNSIgc3Ryb2tlPSIjOTU3NWNkIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8dGV4dCB4PSIyMTUiIHk9IjI1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM5NGEzYjgiPis8L3RleHQ+CiAgICA8cmVjdCB4PSIyNDAiIHk9IjAiIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNSIgcng9IjYiIGZpbGw9IiNmM2U1ZjUiIHN0cm9rZT0iIzk1NzVjZCIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogICAgPHRleHQgeD0iMjg1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSIjOTRhM2I4Ij4rPC90ZXh0PgogICAgPHJlY3QgeD0iMzEwIiB5PSIwIiB3aWR0aD0iMzUiIGhlaWdodD0iMzUiIHJ4PSI2IiBmaWxsPSIjZjNlNWY1IiBzdHJva2U9IiM5NTc1Y2QiIHN0cm9rZS13aWR0aD0iMiIgLz4KICA8L2c+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAsIDEyMCkiPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjM1IiBoZWlnaHQ9IjM1IiByeD0iNiIgZmlsbD0iI2YzZTVmNSIgc3Ryb2tlPSIjOTU3NWNkIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8dGV4dCB4PSI0NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzk0YTNiOCI+KzwvdGV4dD4KICAgIDxyZWN0IHg9IjcwIiB5PSIwIiB3aWR0aD0iMzUiIGhlaWdodD0iMzUiIHJ4PSI2IiBmaWxsPSIjZjNlNWY1IiBzdHJva2U9IiM5NTc1Y2QiIHN0cm9rZS13aWR0aD0iMiIgLz4KICAgIDx0ZXh0IHg9IjExNSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzk0YTNiOCI+KzwvdGV4dD4KICAgIDxyZWN0IHg9IjE0MCIgeT0iMCIgd2lkdGg9IjM1IiBoZWlnaHQ9IjM1IiByeD0iNiIgZmlsbD0iI2YzZTVmNSIgc3Ryb2tlPSIjOTU3NWNkIiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8dGV4dCB4PSIxODUiIHk9IjI1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM5NGEzYjgiPj08L3RleHQ+CiAgICA8Y2lyY2xlIGN4PSIyMzUiIGN5PSIxNy41IiByPSIxNy41IiBmaWxsPSIjZTNmMmZkIiBzdHJva2U9IiM2NGIxZjYiIHN0cm9rZS13aWR0aD0iMiIgLz4KICAgIDx0ZXh0IHg9IjI2NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzk0YTNiOCI+KzwvdGV4dD4KICAgIDxjaXJjbGUgY3g9IjMwNSIgY3k9IjE3LjUiIHI9IjE3LjUiIGZpbGw9IiNlM2YyZmQiIHN0cm9rZT0iIzY0YjFmNiIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogICAgPHRleHQgeD0iMzM1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSIjOTRhM2I4Ij4rPC90ZXh0PgogICAgPGNpcmNsZSBjeD0iMzc1IiBjeT0iMTcuNSIgcj0iMTcuNSIgZmlsbD0iI2UzZjJmZCIgc3Ryb2tlPSIjNjRiMWY2IiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8dGV4dCB4PSI0MDUiIHk9IjI1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM5NGEzYjgiPis8L3RleHQ+CiAgICA8Y2lyY2xlIGN4PSI0NDUiIGN5PSIxNy41IiByPSIxNy41IiBmaWxsPSIjZTNmMmZkIiBzdHJva2U9IiM2NGIxZjYiIHN0cm9rZS13aWR0aD0iMiIgLz4KICA8L2c+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODAsIDIyMCkiPgogICAgPHJlY3QgeD0iLTIwIiB5PSItMjAiIHdpZHRoPSI0NjAiIGhlaWdodD0iODAiIHJ4PSIxNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTJlOGYwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjgsNCIgLz4KICAgIDxwYXRoIGQ9Ik0gMjAgMCBMIDQwIDM1IEwgMCAzNSBaIiBmaWxsPSIjZmZmOWM0IiBzdHJva2U9IiNmYmMwMmQiIHN0cm9rZS13aWR0aD0iMiIgLz4KICAgIDx0ZXh0IHg9IjU1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSIjOTRhM2I4Ij4rPC90ZXh0PgogICAgPHJlY3QgeD0iOTAiIHk9IjAiIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNSIgcng9IjYiIGZpbGw9IiNmM2U1ZjUiIHN0cm9rZT0iIzk1NzVjZCIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogICAgPHRleHQgeD0iMTM1IiB5PSIyNSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSIjOTRhM2I4Ij4rPC90ZXh0PgogICAgPGNpcmNsZSBjeD0iMTg1IiBjeT0iMTcuNSIgcj0iMTcuNSIgZmlsbD0iI2UzZjJmZCIgc3Ryb2tlPSIjNjRiMWY2IiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgICA8dGV4dCB4PSIyMTUiIHk9IjI1IiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiM5NGEzYjgiPis8L3RleHQ+CiAgICA8Y2lyY2xlIGN4PSIyNTUiIGN5PSIxNy41IiByPSIxNy41IiBmaWxsPSIjZTNmMmZkIiBzdHJva2U9IiM2NGIxZjYiIHN0cm9rZS13aWR0aD0iMiIgLz4KICAgIDx0ZXh0IHg9IjI4NSIgeT0iMjUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iIzk0YTNiOCI+PTwvdGV4dD4KICAgIDx0ZXh0IHg9IjMzMCIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZvbnQtc2l6ZT0iNDgiIGZpbGw9IiMyNTYzZWIiPjQwMDwvdGV4dD4KICA8L2c+Cjwvc3ZnPg==',
+            difficulty: 3,
+            solution: `## 【第一步：观察图形关系】\n根据题目给出的图示，我们可以列出以下三个等式：\n1.  两个三角形 = 三个正方形 ($\\triangle + \\triangle = \\square + \\square + \\square$)\n2.  三个正方形 = 四个圆圈 ($\\square + \\square + \\square = \\bigcirc + \\bigcirc + \\bigcirc + \\bigcirc$)\n3.  一个三角形 + 一个正方形 + 两个圆圈 = 400 ($\\triangle + \\square + \\bigcirc + \\bigcirc = 400$)\n\n## 【第二步：等量代换分析】\n我们要想办法把第三个等式里的图形都换成同一种，这样就能算出结果了。\n\n1.  **观察等式 1 和 2**：\n    我们发现“三个正方形”是一个桥梁。\n    因为 $2 \\times \\triangle = 3 \\times \\square$ 且 $3 \\times \\square = 4 \\times \\bigcirc$，\n    所以我们可以得出：**两个三角形 = 四个圆圈**。\n    进一步简化：**一个三角形 = 两个圆圈** ($\\triangle = \\bigcirc + \\bigcirc$)。\n\n2.  **代换到第三个等式**：\n    原式：$\\triangle + \\square + (\\bigcirc + \\bigcirc) = 400$\n    把 $(\\bigcirc + \\bigcirc)$ 换成 $\\triangle$：\n    $\\triangle + \\square + \\triangle = 400$\n    也就是：**两个三角形 + 一个正方形 = 400**。\n\n3.  **再次利用等式 1**：\n    我们知道 **两个三角形 = 三个正方形**。\n    把“两个三角形”换成“三个正方形”：\n    $(3 \\times \\square) + \\square = 400$\n    也就是：**四个正方形 = 400**。\n\n## 【第三步：计算结果】\n1.  **求正方形**：\n    $400 \\div 4 = 100$\n    所以，**正方形 = 100**。\n\n2.  **求三角形**：\n    两个三角形 = 三个正方形 = $3 \\times 100 = 300$\n    一个三角形 = $300 \\div 2 = 150$\n    所以，**三角形 = 150**。\n\n3.  **求圆圈**：\n    一个三角形 = 两个圆圈\n    $150 = 2 \\times \\bigcirc$\n    一个圆圈 = $150 \\div 2 = 75$\n    所以，**圆圈 = 75**。\n\n## 【结论】\n- 三角形代表 **150**\n- 正方形代表 **100**\n- 圆圈代表 **75**`
+          }
+        ]
+      };
+      updatedProblems.push(initialProblem5);
       needsUpdate = true;
     }
     
