@@ -83,6 +83,7 @@ export default function App() {
     const seed4Id = "seed-problem-4-v12"; // Incremented version to ensure fresh seed
     const seed5Id = "seed-problem-5-v3"; // New challenge for March 26th
     const seed6Id = "seed-problem-6-v1"; // New challenge for March 30th
+    const seed7Id = "seed-problem-7-v1"; // New challenge for April 1st
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -101,6 +102,9 @@ export default function App() {
     );
     const hasSeed6 = currentProblems.some(
       (p) => p.id === seed6Id || p.title === "3月30日星际挑战",
+    );
+    const hasSeed7 = currentProblems.some(
+      (p) => p.id === seed7Id || p.title === "4月1日",
     );
 
     let updatedProblems = [...currentProblems];
@@ -233,6 +237,27 @@ export default function App() {
         ],
       };
       updatedProblems.push(initialProblem6);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed7) {
+      const initialProblem7: MathProblem = {
+        id: seed7Id,
+        date: "2026-04-01",
+        title: "4月1日",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 6000,
+        problems: [
+          {
+            id: "sub-7-1",
+            content:
+              "王大伯打算用三段篱笆围一块三角形的菜地（三角形菜地的三条边的长度都是整米数），现在有长 4 米、7 米的两段篱笆，第三段篱笆最长是多少米？最短是多少米？",
+            difficulty: 3,
+            solution: `## 【第一步：审题与分析】\n题目要求我们求出三角形第三条边的最大和最小整数长度。\n已知两边长度分别为 4 米和 7 米。\n这考察了三角形的一个重要性质：**三角形任意两边之和大于第三边，任意两边之差小于第三边**。\n\n## 【第二步：列式计算范围】\n设第三条边的长度为 $x$ 米。\n根据三角形三边关系：\n1.  两边之差：$7 - 4 = 3$ (米)\n2.  两边之和：$7 + 4 = 11$ (米)\n\n所以，第三条边的长度 $x$ 必须满足：\n**$3 < x < 11$**\n\n## 【第三步：确定整数范围】\n题目中提到“三条边的长度都是整米数”，因此 $x$ 只能取 3 到 11 之间的整数。\n可能的长度有：4, 5, 6, 7, 8, 9, 10。\n\n- 最大长度是 **10** 米。\n- 最小长度是 **4** 米。\n\n## 【结论】\n第三段篱笆最长是 **10** 米，最短是 **4** 米。`,
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem7);
       needsUpdate = true;
     }
 
