@@ -44,6 +44,9 @@ const GRAPH_PROBLEM_IMAGE =
 const GEOMETRY_PROBLEM_IMAGE =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSA0MCA0MCBMIDEwMCA0MCBMIDEwMCA4MCBMIDE2MCA4MCBMIDE2MCAxNjAgTCA0MCAxNjAgWiIgZmlsbD0iI2UwZjJmMSIgc3Ryb2tlPSIjMDA3OTZiIiBzdHJva2Utd2lkdGg9IjIiIC8+PHRleHQgeD0iNzAiIHk9IjM1IiBmb250LXNpemU9IjEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4zMCBtPC90ZXh0Pjx0ZXh0IHg9IjM1IiB5PSI2MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9ImVuZCI+MTggbTwvdGV4dD48dGV4dCB4PSIzNSIgeT0iMTIwIiBmb250LXNpemU9IjEyIiB0ZXh0LWFuY2hvcj0iZW5kIj4zMCBtPC90ZXh0Pjwvc3ZnPg==";
 
+const ANGLE_PROBLEM_IMAGE =
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiNmZmZmZmYiIC8+CiAgPHBhdGggZD0iTSA1MCAxNDAgTCA2MCAxNDAgTCA2MCAxNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY0NzQ4YiIgc3Ryb2tlLXdpZHRoPSIxIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjUwIiB4Mj0iNTAiIHkyPSIyNTAiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjE1MCIgeDI9IjI1MCIgeTI9IjE1MCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgPGxpbmUgeDE9IjUwIiB5MT0iNTAiIHgyPSIyNTAiIHkyPSIxNTAiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjI1MCIgeDI9IjE3MCIgeTI9IjExMCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgPHRleHQgeD0iNDUiIHk9IjQ1IiBmb250LXNpemU9IjE0IiBmaWxsPSIjMzM0MTU1Ij5BPC90ZXh0PgogIDx0ZXh0IHg9IjM1IiB5PSIxNTUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMzMzQxNTUiPkI8L3RleHQ+CiAgPHRleHQgeD0iMjYwIiB5PSIxNTUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMzMzQxNTUiPkM8L3RleHQ+CiAgPHRleHQgeD0iNDUiIHk9IjI2NSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzNDE1NSI+RDwvdGV4dD4KICA8dGV4dCB4PSIxNzUiIHk9IjEwNSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzNDE1NSI+RTwvdGV4dD4KICA8dGV4dCB4PSI2MCIgeT0iMjM1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4xPC90ZXh0PgogIDx0ZXh0IHg9IjIyMCIgeT0iMTQ1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4yPC90ZXh0PgogIDx0ZXh0IHg9IjE1NSIgeT0iMTI1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4zPC90ZXh0PgogIDx0ZXh0IHg9IjU1IiB5PSI3NSIgZm9udC1zaXplPSIxMiIgZmlsbD0iI2VmNDQ0NCI+NDwvdGV4dD4KPC9zdmc+";
+
 export default function App() {
   const [problems, setProblems] = useState<MathProblem[]>([]);
   const [viewMode, setViewMode] = useState<ViewMode>("student");
@@ -84,6 +87,7 @@ export default function App() {
     const seed5Id = "seed-problem-5-v3"; // New challenge for March 26th
     const seed6Id = "seed-problem-6-v1"; // New challenge for March 30th
     const seed7Id = "seed-problem-7-v1"; // New challenge for April 1st
+    const seed8Id = "seed-problem-8-v1"; // New challenge for April 3rd
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -105,6 +109,9 @@ export default function App() {
     );
     const hasSeed7 = currentProblems.some(
       (p) => p.id === seed7Id || p.title === "4月1日",
+    );
+    const hasSeed8 = currentProblems.some(
+      (p) => p.id === seed8Id || p.title === "4月3日",
     );
 
     let updatedProblems = [...currentProblems];
@@ -258,6 +265,28 @@ export default function App() {
         ],
       };
       updatedProblems.push(initialProblem7);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed8) {
+      const initialProblem8: MathProblem = {
+        id: seed8Id,
+        date: "2026-04-03",
+        title: "4月3日",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 7000,
+        problems: [
+          {
+            id: "sub-8-1",
+            content:
+              "如图，在 $\\triangle ABC$ 中，$\\angle ABC = 90^\\circ$，点 $D$ 在 $AB$ 的延长线上，点 $E$ 在 $AC$ 上。已知 $\\angle 1 = 15^\\circ$，$\\angle 2 = 25^\\circ$，求 $\\angle 3$ 的度数。",
+            imageUrl: ANGLE_PROBLEM_IMAGE,
+            difficulty: 4,
+            solution: `## 【第一步：分析图形关系】\n观察图形可知：\n1.  在直角三角形 $ABC$ 中，$\\angle ABC = 90^\\circ$。\n2.  $\\angle 2$ 是 $\\angle ACB$，已知 $\\angle 2 = 25^\\circ$。\n3.  $\\angle 4$ 是 $\\angle BAC$。\n4.  $\\angle 3$ 是 $\\triangle ADE$ 的一个内角，$\\angle 1$ 是 $\\angle ADE$。\n\n## 【第二步：计算 $\\angle 4$ 的度数】\n在直角三角形 $ABC$ 中，利用三角形内角和定理：\n$\\angle 4 = 180^\\circ - \\angle ABC - \\angle 2$\n$\\angle 4 = 180^\\circ - 90^\\circ - 25^\\circ = 65^\\circ$\n\n## 【第三步：计算 $\\angle 3$ 的度数】\n在 $\\triangle ADE$ 中，已知：\n- $\\angle 1 = 15^\\circ$\n- $\\angle 4 = 65^\\circ$\n\n利用三角形内角和定理：\n$\\angle 3 = 180^\\circ - \\angle 1 - \\angle 4$\n$\\angle 3 = 180^\\circ - 15^\\circ - 65^\\circ = 100^\\circ$\n\n## 【结论】\n$\\angle 3$ 的度数是 **$100^\\circ$**。`,
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem8);
       needsUpdate = true;
     }
 
