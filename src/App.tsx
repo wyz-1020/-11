@@ -88,6 +88,7 @@ export default function App() {
     const seed6Id = "seed-problem-6-v1"; // New challenge for March 30th
     const seed7Id = "seed-problem-7-v1"; // New challenge for April 1st
     const seed8Id = "seed-problem-8-v1"; // New challenge for April 3rd
+    const seed9Id = "seed-problem-9-v1"; // New challenge for April 13th
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -112,6 +113,9 @@ export default function App() {
     );
     const hasSeed8 = currentProblems.some(
       (p) => p.id === seed8Id || p.title === "4月3日",
+    );
+    const hasSeed9 = currentProblems.some(
+      (p) => p.id === seed9Id || p.title === "4月13日星级挑战",
     );
 
     let updatedProblems = [...currentProblems];
@@ -287,6 +291,27 @@ export default function App() {
         ],
       };
       updatedProblems.push(initialProblem8);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed9) {
+      const initialProblem9: MathProblem = {
+        id: seed9Id,
+        date: "2026-04-13",
+        title: "4月13日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 8000,
+        problems: [
+          {
+            id: "sub-9-1",
+            content:
+              "小马虎在读一个小数时，漏看了小数点，结果读成了六万五千零四。原来的小数能读出两个零，原来的小数是多少？",
+            difficulty: 2,
+            solution: `## 【第一步：分析错误结果】\n小马虎读成的数是“六万五千零四”，写成数字是 **65004**。\n这意味着原来的小数去掉小数点后，数字排列顺序是 6、5、0、0、4。\n\n## 【第二步：寻找小数点的位置】\n我们要在这个数字序列中尝试放入小数点，使得读出来的小数包含“两个零”。\n\n1.  **如果小数点在 6500 后面**：6500.4\n    读作：六千五百点四（没有零）。\n\n2.  **如果小数点在 650 后面**：650.04\n    读作：六百五十点零四（读出一个零）。\n\n3.  **如果小数点在 65 后面**：65.004\n    读作：六十五点零零四（**读出两个零**）。\n\n4.  **如果小数点在 6 后面**：6.5004\n    读作：六点五零零四（**读出两个零**）。\n\n5.  **如果小数点在最前面**：0.65004\n    读作：零点六五零零四（读出三个零）。\n\n## 【第三步：总结结论】\n根据题目要求“能读出两个零”，符合条件的小数有 **65.004** 或 **6.5004**。\n在常规的小学数学题目中，通常指其中一个，我们可以给出这两个可能的答案。\n\n## 【结论】\n原来的小数是 **65.004** 或 **6.5004**。`,
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem9);
       needsUpdate = true;
     }
 
