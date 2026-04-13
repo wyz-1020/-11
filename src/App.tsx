@@ -89,6 +89,7 @@ export default function App() {
     const seed7Id = "seed-problem-7-v1"; // New challenge for April 1st
     const seed8Id = "seed-problem-8-v1"; // New challenge for April 3rd
     const seed9Id = "seed-problem-9-v1"; // New challenge for April 13th
+    const seed10Id = "seed-problem-10-v1"; // New challenge for April 14th
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -116,6 +117,9 @@ export default function App() {
     );
     const hasSeed9 = currentProblems.some(
       (p) => p.id === seed9Id || p.title === "4月13日星级挑战",
+    );
+    const hasSeed10 = currentProblems.some(
+      (p) => p.id === seed10Id || p.title === "4月14日星级挑战",
     );
 
     let updatedProblems = [...currentProblems];
@@ -312,6 +316,27 @@ export default function App() {
         ],
       };
       updatedProblems.push(initialProblem9);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed10) {
+      const initialProblem10: MathProblem = {
+        id: seed10Id,
+        date: "2026-04-14",
+        title: "4月14日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 9000,
+        problems: [
+          {
+            id: "sub-10-1",
+            content:
+              "小马虎在化简一个小数部分是三位的小数时，把小数部分的“0”去掉了，结果写成了4.9，已知这个结果大小是错误的，原来这个小数可能是？",
+            difficulty: 2,
+            solution: `## 【第一步：审题与分析】\n1. 原来的小数部分有 **三位**。\n2. 小马虎去掉了小数部分的“0”后，变成了 **4.9**。\n3. 关键信息：**结果大小是错误的**。这意味着被去掉的“0”不是末尾的零（因为去掉末尾的零不改变小数的大小）。\n\n## 【第二步：逆向推理】\n我们要把 0 填回到 4.9 的小数部分，使其变成三位小数，且数值发生变化。\n\n4.9 的小数部分是“9”。我们要加入两个 0 变成三位：\n\n1. **4.009**：去掉 0 后变成 4.9。数值从 4.009 变为 4.9，大小改变了，符合条件。\n2. **4.090**：去掉 0 后变成 4.9。数值从 4.09 变为 4.9，大小改变了，符合条件。\n3. **4.900**：去掉 0 后变成 4.9。数值没变（$4.900 = 4.9$），不符合“大小错误”的条件。\n\n## 【结论】\n原来这个小数可能是 **4.009** 或 **4.090**。`,
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem10);
       needsUpdate = true;
     }
 
