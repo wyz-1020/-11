@@ -45,7 +45,10 @@ const GEOMETRY_PROBLEM_IMAGE =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTSA0MCA0MCBMIDEwMCA0MCBMIDEwMCA4MCBMIDE2MCA4MCBMIDE2MCAxNjAgTCA0MCAxNjAgWiIgZmlsbD0iI2UwZjJmMSIgc3Ryb2tlPSIjMDA3OTZiIiBzdHJva2Utd2lkdGg9IjIiIC8+PHRleHQgeD0iNzAiIHk9IjM1IiBmb250LXNpemU9IjEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4zMCBtPC90ZXh0Pjx0ZXh0IHg9IjM1IiB5PSI2MCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9ImVuZCI+MTggbTwvdGV4dD48dGV4dCB4PSIzNSIgeT0iMTIwIiBmb250LXNpemU9IjEyIiB0ZXh0LWFuY2hvcj0iZW5kIj4zMCBtPC90ZXh0Pjwvc3ZnPg==";
 
 const ANGLE_PROBLEM_IMAGE =
-  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiNmZmZmZmYiIC8+CiAgPHBhdGggZD0iTSA1MCAxNDAgTCA2MCAxNDAgTCA2MCAxNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY0NzQ4YiIgc3Ryb2tlLXdpZHRoPSIxIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjUwIiB4Mj0iNTAiIHkyPSIyNTAiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjE1MCIgeDI9IjI1MCIgeTI9IjE1MCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgPGxpbmUgeDE9IjUwIiB5MT0iNTAiIHgyPSIyNTAiIHkyPSIxNTAiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjI1MCIgeDI9IjE3MCIgeTI9IjExMCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgPHRleHQgeD0iNDUiIHk9IjQ1IiBmb250LXNpemU9IjE0IiBmaWxsPSIjMzM0MTU1Ij5BPC90ZXh0PgogIDx0ZXh0IHg9IjM1IiB5PSIxNTUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMzMzQxNTUiPkI8L3RleHQ+CiAgPHRleHQgeD0iMjYwIiB5PSIxNTUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMzMzQxNTUiPkM8L3RleHQ+CiAgPHRleHQgeD0iNDUiIHk9IjI2NSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzNDE1NSI+RDwvdGV4dD4KICA8dGV4dCB4PSIxNzUiIHk9IjEwNSIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzNDE1NSI+RTwvdGV4dD4KICA8dGV4dCB4PSI2MCIgeT0iMjM1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4xPC90ZXh0PgogIDx0ZXh0IHg9IjIyMCIgeT0iMTQ1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4yPC90ZXh0PgogIDx0ZXh0IHg9IjE1NSIgeT0iMTI1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4zPC90ZXh0PgogIDx0ZXh0IHg9IjU1IiB5PSI3NSIgZm9udC1zaXplPSIxMiIgZmlsbD0iI2VmNDQ0NCI+NDwvdGV4dD4KPC9zdmc+";
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiNmZmZmZmYiIC8+CiAgPHBhdGggZD0iTSA1MCAxNDAgTCA2MCAxNDAgTCA2MCAxNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY0NzQ4YiIgc3Ryb2tlLXdpZHRoPSIxIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjUwIiB4Mj0iNTAiIHkyPSIyNTAiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjE1MCIgeDI9IjI1MCIgeTI9IjE1MCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgPGxpbmUgeDE9IjUwIiB5MT0iNTAiIHgyPSIyNTAiIHkyPSIxNTAiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjI1MCIgeDI9IjE3MCIgeTI9IjExMCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgPHRleHQgeD0iNDUiIHk9IjQ1IiBmb250LXNpemU9IjE0IiBmaWxsPSIjMzM0MTU1Ij5BPC90ZXh0PgogIDx0ZXh0IHg9IjM1IiB5PSIxNTUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMzMzQxNTUiPkI8L3RleHQ+CiAgPHRleHQgeD0iMjYwIiB5PSIxNTUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMzMzQxNTUiPkM8L3RleHQ+CiAgPHRleHQgeD0iNDUiIHk9IjI2NSIgZm9udC1zaXplPSIxCIgZmlsbD0iIzMzNDE1NSI+RDwvdGV4dD4KICA8dGV4dCB4PSIxNzUiIHk9IjEwNSIgZm9udC1zaXplPSIxCIgZmlsbD0iIzMzNDE1NSI+RTwvdGV4dD4KICA8dGV4dCB4PSI2MCIgeT0iMjM1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4xPC90ZXh0PgogIDx0ZXh0IHg9IjIyMCIgeT0iMTQ1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4yPC90ZXh0PgogIDx0ZXh0IHg9IjE1NSIgeT0iMTI1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4zPC90ZXh0PgogIDx0ZXh0IHg9IjU1IiB5PSI3NSIgZm9udC1zaXplPSIxMiIgZmlsbD0iI2VmNDQ0NCI+NDwvdGV4dD4KPC9zdmc+";
+
+const COUNTING_RODS_IMAGE =
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDYwMCAyNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSIyNDAiIGZpbGw9IiNmZmZmZmYiIC8+CiAgPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iNTgwIiBoZWlnaHQ9IjIyMCIgcng9IjEyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iMiIgLz4KICAKICAmPCEtLSBSb3cgSGVhZGVycyAtLT4KICA8dGV4dCB4PSIzMCIgeT0iNzAiIGZvbnQtZmFtaWx5PSJTaW1IdWksIEFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjMzM0MTU1IiBmb250LXdlaWdodD0iYm9sZCI+57m15byPPC90ZXh0PgogIDx0ZXh0IHg9IjMwIiB5PSIxNTAiIGZvbnQtZmFtaWx5PSJTaW1IdWksIEFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjMzM0MTU1IiBmb250LXdlaWdodD0iYm9sZCI+5qKrlvI88L3RleHQ+CiAgCiAgPCEtLSBDb2x1bW4gTnVtYmVycyAtLT4KICA8ZyBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM2NDc0OGIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPgogICAgPHRleHQgeD0iMTMwIiB5PSIyMTAiPjE8L3RleHQ+CiAgICA8dGV4dCB4PSIxODAiIHk9IjIxMCI+MjwvdGV4dD4KICAgIDx0ZXh0IHg9IjIzMCIgeT0iMjEwIj4zPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSIyMTAiPjQ8L3RleHQ+CiAgICA8dGV4dCB4PSIzMzAiIHk9IjIxMCI+NTwvdGV4dD4KICAgIDx0ZXh0IHg9IjM4MCIgeT0iMjEwIj42PC90ZXh0PgogICAgPHRleHQgeD0iNDMwIiB5PSIyMTAiPjc8L3RleHQ+CiAgICA8dGV4dCB4PSI0ODAiIHk9IjIxMCI+ODwvdGV4dD4KICAgIDx0ZXh0IHg9IjUzMCIgeT0iMjEwIj45PC90ZXh0PgogIDwvZz4KCiAgPCEtLSBWZXJ0aWNhbCBTdHlsZSAo57m15byPKSAxLTkgLS0+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CiAgICA8IS0tIDEgLS0+IDxsaW5lIHgxPSIxMzAiIHkxPSI0MCIgeDI9IjEzMCIgeTI9IjgwIiAvPgogICAgPCEtLSAyIC0tPiA8bGluZSB4MT0iMTc1IiB5MT0iNDAiIHgyPSIxNzUiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjE4NSIgeTE9IjQwIiB4Mj0iMTg1IiB5Mj0iODAiIC8+CiAgICA8IS0tIDMgLS0+IDxsaW5lIHgxPSIyMjAiIHkxPSI0MCIgeDI9IjIyMCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iMjMwIiB5MT0iNDAiIHgyPSIyMzAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjI0MCIgeTE9IjQwIiB4Mj0iMjQwIiB5Mj0iODAiIC8+CiAgICA8IS0tIDQgLS0+IDxsaW5lIHgxPSIyNjUiIHkxPSI0MCIgeDI9IjI2NSIgeTI9IjgwIiAvPiA8bGluZSB4MT0iMjc1IiB5MT0iNDAiIHgyPSIyNzUiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjI4NSIgeTE9IjQwIiB4Mj0iMjg1IiB5Mj0iODAiIC8+IDxsaW5lIHgxPSIyOTUiIHkxPSI0MCIgeDI9IjI5NSIgeTI9IjgwIiAvPgogICAgPCEtLSA1IC0tPiA8bGluZSB4MT0iMzEwIiB5MT0iNDAiIHgyPSIzMTAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjMyMCIgeTE9IjQwIiB4Mj0iMzIwIiB5Mj0iODAiIC8+IDxsaW5lIHgxPSIzMzAiIHkxPSI0MCIgeDI9IjMzMCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iMzQwIiB5MT0iNDAiIHgyPSIzNDAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjM1MCIgeTE9IjQwIiB4Mj0iMzUwIiB5Mj0iODAiIC8+CiAgICA8IS0tIDYgLS0+IDxsaW5lIHgxPSIzNjUiIHkxPSI0MCIgeDI9IjM5NSIgeTI9IjQwIiAvPiA8bGluZSB4MT0iMzgwIiB5MT0iNDAiIHgyPSIzODAiIHkyPSI4MCIgLz4KICAgIDwhLS0gNyAtLT4gPGxpbmUgeDE9IjQxNSIgeTE9IjQwIiB4Mj0iNDQ1IiB5Mj0iNDAiIC8+IDxsaW5lIHgxPSI0MjUiIHkxPSI0MCIgeDI9IjQyNSIgeTI9IjgwIiAvPiA8bGluZSB4MT0iNDM1IiB5MT0iNDAiIHgyPSI0MzUiIHkyPSI4MCIgLz4KICAgIDwhLS0gOCAtLT4gPGxpbmUgeDE9IjQ2NSIgeTE9IjQwIiB4Mj0iNDk1IiB5Mj0iNDAiIC8+IDxsaW5lIHgxPSI0NzAiIHkxPSI0MCIgeDI9IjQ3MCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iNDgwIiB5MT0iNDAiIHgyPSI0ODAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjQ5MCIgeTE9IjQwIiB4Mj0iNDkwIiB5Mj0iODAiIC8+CiAgICA8IS0tIDkgLS0+IDxsaW5lIHgxPSI1MTUiIHkxPSI0MCIgeDI9IjU0NSIgeTI9IjQwIiAvPiA8bGluZSB4MT0iNTE4IiB5MT0iNDAiIHgyPSI1MTgiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjUyNiIgeTE9IjQwIiB4Mj0iNTI2IiB5Mj0iODAiIC8+IDxsaW5lIHgxPSI1MzQiIHkxPSI0MCIgeDI9IjUzNCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iNTQyIiB5MT0iNDAiIHgyPSI1NDIiIHkyPSI4MCIgLz4KICA8L2c+CgogIDwhLS0gSG9yaXpvbnRhbCBTdHlsZSAo5qKrlvI8KSAxLTkgLS0+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CiAgICA8IS0tIDEgLS0+IDxsaW5lIHgxPSIxMTUiIHkxPSIxNTAiIHgyPSIxNDUiIHkyPSIxNTAiIC8+CiAgICA8IS0tIDIgLS0+IDxsaW5lIHgxPSIxNjUiIHkxPSIxNDUiIHgyPSIxOTUiIHkyPSIxNDUiIC8+IDxsaW5lIHgxPSIxNjUiIHkxPSIxNTUiIHgyPSIxOTUiIHkyPSIxNTUiIC8+CiAgICA8IS0tIDMgLS0+IDxsaW5lIHgxPSIyMTUiIHkxPSIxNDAiIHgyPSIyNDUiIHkyPSIxNDAiIC8+IDxsaW5lIHgxPSIyMTUiIHkxPSIxNTAiIHgyPSIyNDUiIHkyPSIxNTAiIC8+IDxsaW5lIHgxPSIyMTUiIHkxPSIxNjAiIHgyPSIyNDUiIHkyPSIxNjAiIC8+CiAgICA8IS0tIDQgLS0+IDxsaW5lIHgxPSIyNjUiIHkxPSIxMzUiIHgyPSIyOTUiIHkyPSIxMzUiIC8+IDxsaW5lIHgxPSIyNjUiIHkxPSIxNDUiIHgyPSIyOTUiIHkyPSIxNDUiIC8+IDxsaW5lIHgxPSIyNjUiIHkxPSIxNTUiIHgyPSIyOTUiIHkyPSIxNTUiIC8+IDxsaW5lIHgxPSIyNjUiIHkxPSIxNjUiIHgyPSIyOTUiIHkyPSIxNjUiIC8+CiAgICA8IS0tIDUgLS0+IDxsaW5lIHgxPSIzMTUiIHkxPSIxMzAiIHgyPSIzNDUiIHkyPSIxMzAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNDAiIHgyPSIzNDUiIHkyPSIxNDAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNTAiIHgyPSIzNDUiIHkyPSIxNTAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNjAiIHgyPSIzNDUiIHkyPSIxNjAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNzAiIHgyPSIzNDUiIHkyPSIxNzAiIC8+CiAgICA8IS0tIDYgLS0+IDxsaW5lIHgxPSIzODAiIHkxPSIxNDAiIHgyPSIzODAiIHkyPSIxNzAiIC8+IDxsaW5lIHgxPSIzNjUiIHkxPSIxNzAiIHgyPSIzOTUiIHkyPSIxNzAiIC8+CiAgICA8IS0tIDcgLS0+IDxsaW5lIHgxPSI0MzAiIHkxPSIxNDAiIHgyPSIzODAiIHkyPSIxNzAiIC8+IDwhLS0gV2FpdCwgNyBpcyAxIHZlcnRpY2FsIGFib3ZlLCAyIGhvcml6b250YWwgYmVsb3cgLS0+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAsIDE1MCkiPgogICAgICA8bGluZSB4MT0iMCIgeTE9Ii0xMCIgeDI9IjAiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjEwIiB4Mj0iMTUiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyMCIgLz4KICAgIDwvZz4KICAgIDwhLS0gOCAtLT4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ4MCwgMTUwkiPgogICAgICA8bGluZSB4MT0iMCIgeTE9Ii0xMCIgeDI9IjAiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjEwIiB4Mj0iMTUiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjMwIiB4Mj0iMTUiIHkyPSIzMCIgLz4KICAgIDwvZz4KICAgIDwhLS0gOSAtLT4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUzMCwgMTUwkiPgogICAgICA8bGluZSB4MT0iMCIgeTE9Ii0xMCIgeDI9IjAiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjEwIiB4Mj0iMTUiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjMwIiB4Mj0iMTUiIHkyPSIzMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjQwIiB4Mj0iMTUiIHkyPSI0MCIgLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg==";
 
 export default function App() {
   const [problems, setProblems] = useState<MathProblem[]>([]);
@@ -90,6 +93,8 @@ export default function App() {
     const seed8Id = "seed-problem-8-v1"; // New challenge for April 3rd
     const seed9Id = "seed-problem-9-v1"; // New challenge for April 13th
     const seed10Id = "seed-problem-10-v1"; // New challenge for April 14th
+    const seed11Id = "seed-problem-11-v1"; // New challenge for April 16th
+    const seed12Id = "seed-problem-12-v1"; // New challenge for May 12th
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -120,6 +125,12 @@ export default function App() {
     );
     const hasSeed10 = currentProblems.some(
       (p) => p.id === seed10Id || p.title === "4月14日星级挑战",
+    );
+    const hasSeed11 = currentProblems.some(
+      (p) => p.id === seed11Id || p.title === "4月16日星级挑战",
+    );
+    const hasSeed12 = currentProblems.some(
+      (p) => p.id === seed12Id || p.title === "5月12日星级挑战",
     );
 
     let updatedProblems = [...currentProblems];
@@ -337,6 +348,61 @@ export default function App() {
         ],
       };
       updatedProblems.push(initialProblem10);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed11) {
+      const initialProblem11: MathProblem = {
+        id: seed11Id,
+        date: "2026-04-16",
+        title: "4月16日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 10000,
+        problems: [
+          {
+            id: "sub-11-1",
+            content: `### 阅读材料，解决问题\n\n**材料一**：我国古代曾用算筹表示数。在算筹记数法中，以纵式和横式两种方式表示数字。用算筹表示数的时候，个位用纵式，十位用横式，百位用纵式，千位用横式，以此类推，把小数部分降低一行表示小数，横竖间隔。例如，3.72 的表示方法如图 ① 所示。\n\n**材料二**：荷兰数学家斯蒂文系统地阐述了小数的理论，他用“①”“②”等符号表示小数点后不同的位数，比如把 3.72 写成 3①7②2。`,
+            imageUrl: "data:image/svg+xml;base64," + COUNTING_RODS_IMAGE,
+            difficulty: 5,
+            solution: `## 【第一步：分析算筹计数规律】\n根据算筹计数法（1-9）的用筹数量：\n- **1-5**：分别使用 1, 2, 3, 4, 5 根算筹。\n- **6-9**：分别使用 2, 3, 4, 5 根算筹（例如 6 是 1 纵 1 横共 2 根，9 是 1 纵 4 横共 5 根）。\n\n总结数字对应的算筹数：\n- 1: 1根 | 2: 2根 | 3: 3根 | 4: 4根 | 5: 5根\n- 6: 2根 | 7: 3根 | 8: 4根 | 9: 5根\n\n## 【第二步：根据材料二的符号表示】\n根据斯蒂文的表示法，小数点后第一位用 ①，第二位用 ②，以此类推：\n3.72 写作：**3①7②2**`,
+          },
+          {
+            id: "sub-11-2",
+            content: `**问题**：点点用 14 根算筹摆出了一个整数部分是一位数且一个零也不读的四位小数，这个小数最大是多少？并用材料二中的符号表示出来。`,
+            difficulty: 5,
+            solution: `## 【第一步：分析条件】\n1. **数位要求**：整数部分 1 位，小数部分 4 位，共 5 位数字。\n2. **限制条件**：总共使用 14 根算筹；一个零也不读（即每一位数字都不能是 0）。\n3. **目标**：求最大值。\n\n## 【第二步：推理过程】\n要使数值最大，应优先让高位数字尽可能大：\n- **整数部分**：尝试最大数字 **9**（使用 5 根），剩余 $14 - 5 = 9$ 根。\n- **十分位**：尝试最大数字 **9**（使用 5 根），剩余 $9 - 5 = 4$ 根。\n- **剩余三位**（百分位、千分位、万分位）：需要用 4 根算筹摆出 3 个非零数字。\n- 只有一种分配方案：2 根、1 根、1 根。\n- 对应数字：2 根可以是数字 **6** 或 **2**；1 根只能是数字 **1**。\n- 为了使数最大，百分位取 **6**，千分位和万分位取 **1**。\n\n组合数字：**9.9611**\n验证：$5 + 5 + 2 + 1 + 1 = 14$ 根，符合条件。\n\n## 【第三步：符号表示】\n根据斯蒂文的表示法：\n9.9611 写作：**9①9②6③1④1**\n\n## 【结论】\n这个小数最大是 **9.9611**，表示为 **9①9②6③1④1**。`,
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem11);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed12) {
+      const initialProblem12: MathProblem = {
+        id: seed12Id,
+        date: "2026-05-12",
+        title: "5月12日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 11000,
+        problems: [
+          {
+            id: "sub-12-1",
+            content:
+              "（1）甲乙两数的和是616，如果把甲数的小数点向右移动一位，那么得到的数与乙数相等。甲数是（       ），乙数是（          ）。",
+            difficulty: 3,
+            solution: `## 【第一步：分析小数点移动规律】\n当一个小数的小数点向右移动一位时，这个数就扩大到原来的 **10 倍**。\n根据题意，把甲数的小数点向右移动一位后得到的数与乙数相等，说明：\n**乙数 = 甲数 × 10**\n\n## 【第二步：建立等量关系】\n已知甲乙两数的和是 616，我们可以用代数的方法来表示：\n设甲数为 $x$，则乙数为 $10x$。\n$x + 10x = 616$\n\n## 【第三步：求解方程】\n$11x = 616$\n$x = 616 \\div 11$\n$x = 56$\n\n既然甲数 $x = 56$，那么乙数就是：\n$56 \\times 10 = 560$\n\n## 【第四步：验证结果】\n$56 + 560 = 616$（符合和为 616 的条件）\n\n## 【结论】\n甲数是 **56**，乙数是 **560**。`,
+          },
+          {
+            id: "sub-12-2",
+            content:
+              "（2）甲比乙小1512，如果把甲数的小数点向右移动一位，那么得到的数与乙数相等。甲、乙两数的和是（          ）。",
+            difficulty: 3,
+            solution: `## 【第一步：分析数值关系】\n同样地，把甲数的小数点向右移动一位后得到的数与乙数相等，意味着：\n**乙数是甲数的 10 倍**。\n\n## 【第二步：建立等量关系】\n已知“甲比乙小 1512”，即：\n**乙数 - 甲数 = 1512**\n\n设甲数为 $x$，则乙数为 $10x$：\n$10x - x = 1512$\n\n## 【第三步：求解甲数和乙数】\n$9x = 1512$\n$x = 1512 \\div 9$\n$x = 168$\n\n既然甲数是 **168**，那么乙数是：\n$168 \\times 10 = 1680$\n\n## 【第四步：求和】\n题目要求的是甲、乙两数的和：\n$168 + 1680 = 1848$\n\n## 【结论】\n甲、乙两数的和是 **1848**。`,
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem12);
       needsUpdate = true;
     }
 
