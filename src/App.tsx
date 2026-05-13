@@ -95,6 +95,7 @@ export default function App() {
     const seed10Id = "seed-problem-10-v1"; // New challenge for April 14th
     const seed11Id = "seed-problem-11-v1"; // New challenge for April 16th
     const seed12Id = "seed-problem-12-v1"; // New challenge for May 12th
+    const seed13Id = "seed-problem-13-v1"; // New challenge for May 15th
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -131,6 +132,9 @@ export default function App() {
     );
     const hasSeed12 = currentProblems.some(
       (p) => p.id === seed12Id || p.title === "5月12日星级挑战",
+    );
+    const hasSeed13 = currentProblems.some(
+      (p) => p.id === seed13Id || p.title === "5月15日星级挑战",
     );
 
     let updatedProblems = [...currentProblems];
@@ -403,6 +407,27 @@ export default function App() {
         ],
       };
       updatedProblems.push(initialProblem12);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed13) {
+      const initialProblem13: MathProblem = {
+        id: seed13Id,
+        date: "2026-05-15",
+        title: "5月15日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 12000,
+        problems: [
+          {
+            id: "sub-13-1",
+            content:
+              "小明在计算12减去一个数的时候，错误把减号看成了加号，结果比正确答案多4.8，正确的差是多少？",
+            difficulty: 2,
+            solution: `## 【第一步：分析错误原因】\n正确的计算方法是：$12 - \\text{减数}$\n错误的计算方法是：$12 + \\text{减数}$\n\n## 【第二步：寻找数值关系】\n根据题意，错误的结果比正确的答案多 4.8。\n我们可以写出等式：\n$(12 + \\text{减数}) - (12 - \\text{减数}) = 4.8$\n\n## 【第三步：求出减数】\n去括号简化等式：\n$12 + \\text{减数} - 12 + \\text{减数} = 4.8$\n$2 \\times \\text{减数} = 4.8$\n$\\text{减数} = 4.8 \\div 2 = 2.4$\n\n## 【第四步：求正确的差】\n正确的计算应该是：\n$12 - 2.4 = 9.6$\n\n## 【结论】\n正确的差是 **9.6**。`,
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem13);
       needsUpdate = true;
     }
 
