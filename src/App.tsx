@@ -95,7 +95,7 @@ export default function App() {
     const seed10Id = "seed-problem-10-v1"; // New challenge for April 14th
     const seed11Id = "seed-problem-11-v1"; // New challenge for April 16th
     const seed12Id = "seed-problem-12-v1"; // New challenge for May 12th
-    const seed13Id = "seed-problem-13-v1"; // New challenge for May 15th
+    const seed13Id = "seed-problem-13-v2"; // New challenge for May 19th
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -134,7 +134,7 @@ export default function App() {
       (p) => p.id === seed12Id || p.title === "5月12日星级挑战",
     );
     const hasSeed13 = currentProblems.some(
-      (p) => p.id === seed13Id || p.title === "5月15日星级挑战",
+      (p) => p.id === seed13Id || p.title === "5月19日星级挑战",
     );
 
     let updatedProblems = [...currentProblems];
@@ -413,17 +413,16 @@ export default function App() {
     if (!hasSeed13) {
       const initialProblem13: MathProblem = {
         id: seed13Id,
-        date: "2026-05-15",
-        title: "5月15日星级挑战",
+        date: "2026-05-19",
+        title: "5月19日星级挑战",
         unlockTime: "14:00",
         createdAt: Date.now() + 12000,
         problems: [
           {
             id: "sub-13-1",
-            content:
-              "小明在计算12减去一个数的时候，错误把减号看成了加号，结果比正确答案多4.8，正确的差是多少？",
-            difficulty: 2,
-            solution: `## 【第一步：分析错误原因】\n正确的计算方法是：$12 - \\text{减数}$\n错误的计算方法是：$12 + \\text{减数}$\n\n## 【第二步：寻找数值关系】\n根据题意，错误的结果比正确的答案多 4.8。\n我们可以写出等式：\n$(12 + \\text{减数}) - (12 - \\text{减数}) = 4.8$\n\n## 【第三步：求出减数】\n去括号简化等式：\n$12 + \\text{减数} - 12 + \\text{减数} = 4.8$\n$2 \\times \\text{减数} = 4.8$\n$\\text{减数} = 4.8 \\div 2 = 2.4$\n\n## 【第四步：求正确的差】\n正确的计算应该是：\n$12 - 2.4 = 9.6$\n\n## 【结论】\n正确的差是 **9.6**。`,
+            content: `### 竖式谜\n\n下面的竖式中，不同的汉字代表不同的数字，相同的汉字代表相同的数字。你能算出这些汉字各代表什么数字吗？（汉字都不代表 0）\n\n\`\`\`text\n      爱 数 学\n-     爱 数 . 学\n----------------\n    爱 爱 数 . 学\n\`\`\``,
+            difficulty: 3,
+            solution: `## 【第一步：字母化建模】\n设“爱”为 $A$，“数”为 $B$，“学”为 $C$。\n根据题意，$A, B, C$ 是 1 到 9 之间互不相同的数字。\n\n竖式可以转化为等式：\n$(100A + 10B + C) - (10A + B + 0.1C) = 100A + 10A + B + 0.1C$\n\n## 【第二步：化简等式】\n将等式左边展开并合并同类项：\n$90A + 9B + 0.9C = 110A + B + 0.1C$\n\n将含 $A$ 的项移到一边，含 $B, C$ 的项移到另一边：\n$8B + 0.8C = 110A - 90A$\n$8B + 0.8C = 20A$\n\n两边同时乘以 10：\n$80B + 8C = 200A$\n\n同时除以 8：\n$10B + C = 25A$\n\n## 【第三步：讨论寻找答案】\n因为 $B, C$ 是 1 到 9 的数字，所以 $10B + C$ 的取值范围是 $11$ 到 $99$。\n\n1. 如果 $A = 1$：\n   $10B + C = 25 \\times 1 = 25$\n   得到 $B = 2, C = 5$。\n   验证：$A, B, C$ 分别为 $1, 2, 5$，互不相同且不为 0。符合条件。\n   计算验证：$125 - 12.5 = 112.5$。\n\n2. 如果 $A = 2$：\n   $10B + C = 25 \\times 2 = 50$\n   得到 $B = 5, C = 0$。\n   不符合“汉字都不代表 0”的条件。\n\n3. 如果 $A = 3$：\n   $10B + C = 25 \\times 3 = 75$\n   得到 $B = 7, C = 5$。\n   验证：$A, B, C$ 分别为 $3, 7, 5$，互不相同且不为 0。符合条件。\n   计算验证：$375 - 37.5 = 337.5$。\n\n4. 如果 $A \ge 4$：\n   $10B + C \ge 100$，这对于两位数 $10B+C$ 来说是不可能的。\n\n## 【结论】\n答案有两组（均为 1, 2, 5 或 3, 7, 5）：\n- 爱 = 1，数 = 2，学 = 5\n- 爱 = 3，数 = 7，学 = 5`,
           },
         ],
       };
