@@ -96,6 +96,7 @@ export default function App() {
     const seed11Id = "seed-problem-11-v1"; // New challenge for April 16th
     const seed12Id = "seed-problem-12-v1"; // New challenge for May 12th
     const seed13Id = "seed-problem-13-v2"; // New challenge for May 19th
+    const seed14Id = "seed-problem-14-v1"; // New challenge for May 20th
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -135,6 +136,9 @@ export default function App() {
     );
     const hasSeed13 = currentProblems.some(
       (p) => p.id === seed13Id || p.title === "5月19日星级挑战",
+    );
+    const hasSeed14 = currentProblems.some(
+      (p) => p.id === seed14Id || p.title === "5月20日星级挑战",
     );
 
     let updatedProblems = [...currentProblems];
@@ -427,6 +431,33 @@ export default function App() {
         ],
       };
       updatedProblems.push(initialProblem13);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed14) {
+      const initialProblem14: MathProblem = {
+        id: seed14Id,
+        date: "2026-05-20",
+        title: "5月20日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 13000,
+        problems: [
+          {
+            id: "sub-14-1",
+            content: "### 第一题：简便运算\n\n**60.5 + 60.7 + 59.8 + 61.1 + 60.8 + 58.8**",
+            difficulty: 2,
+            solution: "## 【第一步：分析特征】\n观察这些数，发现它们都非常接近 **60**。因此，我们可以选择 60 作为基准数。\n\n## 【第二步：基准数法计算】\n我们可以把每一个数都拆成 $60 +$ 或 $60 -$ 的形式：\n- $60.5 = 60 + 0.5$\n- $60.7 = 60 + 0.7$\n- $59.8 = 60 - 0.2$\n- $61.1 = 60 + 1.1$\n- $60.8 = 60 + 0.8$\n- $58.8 = 60 - 1.2$\n\n## 【第三步：合并计算】\n$60 \\times 6 + (0.5 + 0.7 - 0.2 + 1.1 + 0.8 - 1.2)$\n$= 360 + (1.2 - 0.2 + 1.1 + 0.8 - 1.2)$\n$= 360 + (1 + 1.9 - 1.2)$\n$= 360 + (2.9 - 1.2)$\n$= 360 + 1.7$\n$= 361.7$\n\n## 【结论】\n原式结果为 **361.7**。",
+          },
+          {
+            id: "sub-14-2",
+            content:
+              "### 第二题：应用题\n\n**妈妈买来一桶油，连桶重 5.2kg，用去一半油后，连桶重 2.7kg，这桶油原来重多少千克？桶重多少千克？**",
+            difficulty: 2,
+            solution: "## 【第一步：分析总量变化】\n- **连桶原重**：$5.2\\text{ kg}$\n- **剩余连桶重**：$2.7\\text{ kg}$\n\n## 【第二步：求出一半油的重量】\n因为用去的是一半的油，所以减少的重量就是一半油的重量：\n$5.2 - 2.7 = 2.5\\text{ kg}$\n\n## 【第三步：求出原来油的总重】\n原来的油重是一半油重的 2 倍：\n$2.5 \\times 2 = 5\\text{ kg}$\n\n## 【第四步：求出桶的重量】\n用原来的总重量（油 + 桶）减去油的重量：\n$5.2 - 5 = 0.2\\text{ kg}$\n\n## 【结论】\n这桶油原来重 **5kg**，桶重 **0.2kg**。",
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem14);
       needsUpdate = true;
     }
 
