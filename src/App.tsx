@@ -47,6 +47,12 @@ const GEOMETRY_PROBLEM_IMAGE =
 const ANGLE_PROBLEM_IMAGE =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDMwMCAzMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiNmZmZmZmYiIC8+CiAgPHBhdGggZD0iTSA1MCAxNDAgTCA2MCAxNDAgTCA2MCAxNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY0NzQ4YiIgc3Ryb2tlLXdpZHRoPSIxIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjUwIiB4Mj0iNTAiIHkyPSIyNTAiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjE1MCIgeDI9IjI1MCIgeTI9IjE1MCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgPGxpbmUgeDE9IjUwIiB5MT0iNTAiIHgyPSIyNTAiIHkyPSIxNTAiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIyIiAvPgogIDxsaW5lIHgxPSI1MCIgeTE9IjI1MCIgeDI9IjE3MCIgeTI9IjExMCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIiIC8+CiAgPHRleHQgeD0iNDUiIHk9IjQ1IiBmb250LXNpemU9IjE0IiBmaWxsPSIjMzM0MTU1Ij5BPC90ZXh0PgogIDx0ZXh0IHg9IjM1IiB5PSIxNTUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMzMzQxNTUiPkI8L3RleHQ+CiAgPHRleHQgeD0iMjYwIiB5PSIxNTUiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMzMzQxNTUiPkM8L3RleHQ+CiAgPHRleHQgeD0iNDUiIHk9IjI2NSIgZm9udC1zaXplPSIxCIgZmlsbD0iIzMzNDE1NSI+RDwvdGV4dD4KICA8dGV4dCB4PSIxNzUiIHk9IjEwNSIgZm9udC1zaXplPSIxCIgZmlsbD0iIzMzNDE1NSI+RTwvdGV4dD4KICA8dGV4dCB4PSI2MCIgeT0iMjM1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4xPC90ZXh0PgogIDx0ZXh0IHg9IjIyMCIgeT0iMTQ1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4yPC90ZXh0PgogIDx0ZXh0IHg9IjE1NSIgeT0iMTI1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjZWY0NDQ0Ij4zPC90ZXh0PgogIDx0ZXh0IHg9IjU1IiB5PSI3NSIgZm9udC1zaXplPSIxMiIgZmlsbD0iI2VmNDQ0NCI+NDwvdGV4dD4KPC9zdmc+";
 
+const AXISYMMETRIC_3X3_IMAGE =
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUyIiBoZWlnaHQ9IjE1MiIgdmlld0JveD0iMCAwIDE1MiAxNTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSwgMSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzNiODJmNiIgc3Ryb2tlPSIjMWUzYThhIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSI0IiAvPjxyZWN0IHg9IjUwIiB5PSIwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iI2NiZDVlMSIgc3Ryb2tlLXdpZHRoPSIyIiByeD0iNCIgLz48cmVjdCB4PSIxMDAiIHk9IjAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSI0IiAvPjxyZWN0IHg9IjAiIHk9IjUwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iI2NiZDVlMSIgc3Ryb2tlLXdpZHRoPSIyIiByeD0iNCIgLz48cmVjdCB4PSI1MCIgeT0iNTAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzNiODJmNiIgc3Ryb2tlPSIjMWUzYThhIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSI0IiAvPjxyZWN0IHg9IjEwMCIgeT0iNTAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSI0IiAvPjxyZWN0IHg9IjAiIHk9IjEwMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjM2I4MmY2IiBzdHJva2U9IiMxZTNhOGEiIHN0cm9rZS13aWR0aD0iMiIgcng9IjQiIC8+PHJlY3QgeD0iNTAiIHk9IjEwMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNjYmQ1ZTEiIHN0cm9rZS13aWR0aD0iMiIgcng9IjQiIC8+PHJlY3QgeD0iMTAwIiB5PSIxMDAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSI0IiAvPjwvZz48L3N2Zz4=";
+
+const AXISYMMETRIC_3X4_IMAGE =
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUyIiBoZWlnaHQ9IjIwMiIgdmlld0JveD0iMCAwIDE1MiAyMDIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSwgMSkiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSI0IiAvPjxyZWN0IHg9IjUwIiB5PSIwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiMzYjgyZjYiIHN0cm9rZT0iIzFlM2E4YSIgc3Ryb2tlLXdpZHRoPSIyIiByeD0iNCIgLz48cmVjdCB4PSIxMDAiIHk9IjAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSI0IiAvPjxyZWN0IHg9IjAiIHk9IjUwIiB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIGZpbGw9IiNmZmZmZmYiIHN0cm9rZT0iI2NiZDVlMSIgc3Ryb2tlLXdpZHRoPSIyIiByeD0iNCIgLz48cmVjdCB4PSI1MCIgeT0iNTAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzNiODJmNiIgc3Ryb2tlPSIjMWUzYThhIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSI0IiAvPjxyZWN0IHg9IjEwMCIgeT0iNTAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSI0IiAvPjxyZWN0IHg9IjAiIHk9IjEwMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNjYmQ1ZTEiIHN0cm9rZS13aWR0aD0iMiIgcng9IjQiIC8+PHJlY3QgeD0iNTAiIHk9IjEwMCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjM2I4MmY2IiBzdHJva2U9IiMxZTNhOGEiIHN0cm9rZS13aWR0aD0iMiIgcng9IjQiIC8+PHJlY3QgeD0iMTAwIiB5PSIxMDAiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSI0IiAvPjxyZWN0IHg9IjAiIHk9IjE1MCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNjYmQ1ZTEiIHN0cm9rZS13aWR0aD0iMiIgcng9IjQiIC8+PHJlY3QgeD0iNTAiIHk9IjE1MCIgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjM2I4MmY2IiBzdHJva2U9IiMxZTNhOGEiIHN0cm9rZS13aWR0aD0iMiIgcng9IjQiIC8+PHJlY3QgeD0iMTAwIiB5PSIxNTEiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iI2ZmZmZmZiIgc3Ryb2tlPSIjY2JkNWUxIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSI0IiAvPjwvZz48L3N2Zz4=";
+
 const COUNTING_RODS_IMAGE =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDYwMCAyNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSIyNDAiIGZpbGw9IiNmZmZmZmYiIC8+CiAgPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iNTgwIiBoZWlnaHQ9IjIyMCIgcng9IjEyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iMiIgLz4KICAKICAmPCEtLSBSb3cgSGVhZGVycyAtLT4KICA8dGV4dCB4PSIzMCIgeT0iNzAiIGZvbnQtZmFtaWx5PSJTaW1IdWksIEFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjMzM0MTU1IiBmb250LXdlaWdodD0iYm9sZCI+57m15byPPC90ZXh0PgogIDx0ZXh0IHg9IjMwIiB5PSIxNTAiIGZvbnQtZmFtaWx5PSJTaW1IdWksIEFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjMzM0MTU1IiBmb250LXdlaWdodD0iYm9sZCI+5qKrlvI88L3RleHQ+CiAgCiAgPCEtLSBDb2x1bW4gTnVtYmVycyAtLT4KICA8ZyBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM2NDc0OGIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPgogICAgPHRleHQgeD0iMTMwIiB5PSIyMTAiPjE8L3RleHQ+CiAgICA8dGV4dCB4PSIxODAiIHk9IjIxMCI+MjwvdGV4dD4KICAgIDx0ZXh0IHg9IjIzMCIgeT0iMjEwIj4zPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSIyMTAiPjQ8L3RleHQ+CiAgICA8dGV4dCB4PSIzMzAiIHk9IjIxMCI+NTwvdGV4dD4KICAgIDx0ZXh0IHg9IjM4MCIgeT0iMjEwIj42PC90ZXh0PgogICAgPHRleHQgeD0iNDMwIiB5PSIyMTAiPjc8L3RleHQ+CiAgICA8dGV4dCB4PSI0ODAiIHk9IjIxMCI+ODwvdGV4dD4KICAgIDx0ZXh0IHg9IjUzMCIgeT0iMjEwIj45PC90ZXh0PgogIDwvZz4KCiAgPCEtLSBWZXJ0aWNhbCBTdHlsZSAo57m15byPKSAxLTkgLS0+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CiAgICA8IS0tIDEgLS0+IDxsaW5lIHgxPSIxMzAiIHkxPSI0MCIgeDI9IjEzMCIgeTI9IjgwIiAvPgogICAgPCEtLSAyIC0tPiA8bGluZSB4MT0iMTc1IiB5MT0iNDAiIHgyPSIxNzUiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjE4NSIgeTE9IjQwIiB4Mj0iMTg1IiB5Mj0iODAiIC8+CiAgICA8IS0tIDMgLS0+IDxsaW5lIHgxPSIyMjAiIHkxPSI0MCIgeDI9IjIyMCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iMjMwIiB5MT0iNDAiIHgyPSIyMzAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjI0MCIgeTE9IjQwIiB4Mj0iMjQwIiB5Mj0iODAiIC8+CiAgICA8IS0tIDQgLS0+IDxsaW5lIHgxPSIyNjUiIHkxPSI0MCIgeDI9IjI2NSIgeTI9IjgwIiAvPiA8bGluZSB4MT0iMjc1IiB5MT0iNDAiIHgyPSIyNzUiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjI4NSIgeTE9IjQwIiB4Mj0iMjg1IiB5Mj0iODAiIC8+IDxsaW5lIHgxPSIyOTUiIHkxPSI0MCIgeDI9IjI5NSIgeTI9IjgwIiAvPgogICAgPCEtLSA1IC0tPiA8bGluZSB4MT0iMzEwIiB5MT0iNDAiIHgyPSIzMTAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjMyMCIgeTE9IjQwIiB4Mj0iMzIwIiB5Mj0iODAiIC8+IDxsaW5lIHgxPSIzMzAiIHkxPSI0MCIgeDI9IjMzMCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iMzQwIiB5MT0iNDAiIHgyPSIzNDAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjM1MCIgeTE9IjQwIiB4Mj0iMzUwIiB5Mj0iODAiIC8+CiAgICA8IS0tIDYgLS0+IDxsaW5lIHgxPSIzNjUiIHkxPSI0MCIgeDI9IjM5NSIgeTI9IjQwIiAvPiA8bGluZSB4MT0iMzgwIiB5MT0iNDAiIHgyPSIzODAiIHkyPSI4MCIgLz4KICAgIDwhLS0gNyAtLT4gPGxpbmUgeDE9IjQxNSIgeTE9IjQwIiB4Mj0iNDQ1IiB5Mj0iNDAiIC8+IDxsaW5lIHgxPSI0MjUiIHkxPSI0MCIgeDI9IjQyNSIgeTI9IjgwIiAvPiA8bGluZSB4MT0iNDM1IiB5MT0iNDAiIHgyPSI0MzUiIHkyPSI4MCIgLz4KICAgIDwhLS0gOCAtLT4gPGxpbmUgeDE9IjQ2NSIgeTE9IjQwIiB4Mj0iNDk1IiB5Mj0iNDAiIC8+IDxsaW5lIHgxPSI0NzAiIHkxPSI0MCIgeDI9IjQ3MCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iNDgwIiB5MT0iNDAiIHgyPSI0ODAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjQ5MCIgeTE9IjQwIiB4Mj0iNDkwIiB5Mj0iODAiIC8+CiAgICA8IS0tIDkgLS0+IDxsaW5lIHgxPSI1MTUiIHkxPSI0MCIgeDI9IjU0NSIgeTI9IjQwIiAvPiA8bGluZSB4MT0iNTE4IiB5MT0iNDAiIHgyPSI1MTgiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjUyNiIgeTE9IjQwIiB4Mj0iNTI2IiB5Mj0iODAiIC8+IDxsaW5lIHgxPSI1MzQiIHkxPSI0MCIgeDI9IjUzNCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iNTQyIiB5MT0iNDAiIHgyPSI1NDIiIHkyPSI4MCIgLz4KICA8L2c+CgogIDwhLS0gSG9yaXpvbnRhbCBTdHlsZSAo5qKrlvI8KSAxLTkgLS0+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CiAgICA8IS0tIDEgLS0+IDxsaW5lIHgxPSIxMTUiIHkxPSIxNTAiIHgyPSIxNDUiIHkyPSIxNTAiIC8+CiAgICA8IS0tIDIgLS0+IDxsaW5lIHgxPSIxNjUiIHkxPSIxNDUiIHgyPSIxOTUiIHkyPSIxNDUiIC8+IDxsaW5lIHgxPSIxNjUiIHkxPSIxNTUiIHgyPSIxOTUiIHkyPSIxNTUiIC8+CiAgICA8IS0tIDMgLS0+IDxsaW5lIHgxPSIyMTUiIHkxPSIxNDAiIHgyPSIyNDUiIHkyPSIxNDAiIC8+IDxsaW5lIHgxPSIyMTUiIHkxPSIxNTAiIHgyPSIyNDUiIHkyPSIxNTAiIC8+IDxsaW5lIHgxPSIyMTUiIHkxPSIxNjAiIHgyPSIyNDUiIHkyPSIxNjAiIC8+CiAgICA8IS0tIDQgLS0+IDxsaW5lIHgxPSIyNjUiIHkxPSIxMzUiIHgyPSIyOTUiIHkyPSIxMzUiIC8+IDxsaW5lIHgxPSIyNjUiIHkxPSIxNDUiIHgyPSIyOTUiIHkyPSIxNDUiIC8+IDxsaW5lIHgxPSIyNjUiIHkxPSIxNTUiIHgyPSIyOTUiIHkyPSIxNTUiIC8+IDxsaW5lIHgxPSIyNjUiIHkxPSIxNjUiIHgyPSIyOTUiIHkyPSIxNjUiIC8+CiAgICA8IS0tIDUgLS0+IDxsaW5lIHgxPSIzMTUiIHkxPSIxMzAiIHgyPSIzNDUiIHkyPSIxMzAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNDAiIHgyPSIzNDUiIHkyPSIxNDAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNTAiIHgyPSIzNDUiIHkyPSIxNTAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNjAiIHgyPSIzNDUiIHkyPSIxNjAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNzAiIHgyPSIzNDUiIHkyPSIxNzAiIC8+CiAgICA8IS0tIDYgLS0+IDxsaW5lIHgxPSIzODAiIHkxPSIxNDAiIHgyPSIzODAiIHkyPSIxNzAiIC8+IDxsaW5lIHgxPSIzNjUiIHkxPSIxNzAiIHgyPSIzOTUiIHkyPSIxNzAiIC8+CiAgICA8IS0tIDcgLS0+IDxsaW5lIHgxPSI0MzAiIHkxPSIxNDAiIHgyPSIzODAiIHkyPSIxNzAiIC8+IDwhLS0gV2FpdCwgNyBpcyAxIHZlcnRpY2FsIGFib3ZlLCAyIGhvcml6b250YWwgYmVsb3cgLS0+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAsIDE1MCkiPgogICAgICA8bGluZSB4MT0iMCIgeTE9Ii0xMCIgeDI9IjAiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjEwIiB4Mj0iMTUiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyMCIgLz4KICAgIDwvZz4KICAgIDwhLS0gOCAtLT4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ4MCwgMTUwkiPgogICAgICA8bGluZSB4MT0iMCIgeTE9Ii0xMCIgeDI9IjAiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjEwIiB4Mj0iMTUiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjMwIiB4Mj0iMTUiIHkyPSIzMCIgLz4KICAgIDwvZz4KICAgIDwhLS0gOSAtLT4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUzMCwgMTUwkiPgogICAgICA8bGluZSB4MT0iMCIgeTE9Ii0xMCIgeDI9IjAiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjEwIiB4Mj0iMTUiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjMwIiB4Mj0iMTUiIHkyPSIzMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjQwIiB4Mj0iMTUiIHkyPSI0MCIgLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg==";
 
@@ -97,6 +103,7 @@ export default function App() {
     const seed12Id = "seed-problem-12-v1"; // New challenge for May 12th
     const seed13Id = "seed-problem-13-v2"; // New challenge for May 19th
     const seed14Id = "seed-problem-14-v1"; // New challenge for May 20th
+    const seed15Id = "seed-problem-15-v2"; // New challenge for May 26th
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -139,6 +146,9 @@ export default function App() {
     );
     const hasSeed14 = currentProblems.some(
       (p) => p.id === seed14Id || p.title === "5月20日星级挑战",
+    );
+    const hasSeed15 = currentProblems.some(
+      (p) => p.id === seed15Id,
     );
 
     let updatedProblems = [...currentProblems];
@@ -461,6 +471,38 @@ export default function App() {
       needsUpdate = true;
     }
 
+    if (!hasSeed15) {
+      // Remove any old seed 15 versions to avoid duplicates
+      updatedProblems = updatedProblems.filter(
+        (p) => p.id !== "seed-problem-15-v1" && p.title !== "5月26日星级挑战"
+      );
+      const initialProblem15: MathProblem = {
+        id: seed15Id,
+        date: "2026-05-26",
+        title: "5月26日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 14000,
+        problems: [
+          {
+            id: "sub-15-1",
+            content: "## **第一题：图形的轴对称 (3星)**\n\n### 在下面的 3x3 图形中，再给 **1 个** 小方格涂上颜色，使涂色部分成为一个轴对称图形，一共有多少种不同的涂法？",
+            imageUrl: AXISYMMETRIC_3X3_IMAGE,
+            difficulty: 3,
+            solution: "## 【第一步：分析已有图形的对称性】\n观察给出的 3×3 网络图，已有 3 个蓝色格子。设行号为 1~3（从上到下），列号为 1~3（从左到右）：\n- 已二倍色位置：(1,1)，(2,2)，(3,1)\n- 该图形本身已经关于**水平中线**对称：(1,1) 与 (3,1) 互为对称点，(2,2) 位于中线上。\n\n## 【第二步：寻找新增 1 个格子使其轴对称的方案】\n轴对称图形的对称轴可以是：水平中线、垂直中线、主对角线、副对角线。我们分别尝试：\n\n1. **保持关于“水平中线”对称：**\n   新增的一个格子也必须落在线对称点上，或者自身位于对称轴上。\n   - 位于水平中在线的未涂色格子有：(2,1) 和 (2,3)。\n   - 如果涂色 **(2,1)**：图形具有水平对称轴（行1与行3对称，行2内部对称）。符合条件！\n   - 如果涂色 **(2,3)**：图形具有水平对称轴。符合条件！\n\n2. **使图形关于“主对角线（左上到右下）”对称：**\n   - 已有格子 (1,1) 和 (2,2) 已经在对角线上，只需让 (3,1) 的对称点 (1,3) 也被涂色。\n   - 如果涂色 **(1,3)**：整个图形将关于主对角线完美对称。符合条件！\n\n3. **使图形关于“副对角线（右上到左下）”对称：**\n   - 已有格子 (3,1) 和 (2,2) 已经在对角线上，只需让 (1,1) 的对称点 (3,3) 也被涂色。\n   - 如果涂色 **(3,3)**：整个图形将关于副对角线完美对称。符合条件！\n\n## 【结论】\n一共有 **4** 种不同的涂法，分别涂在以下网格位置：\n1. 第二行第一列 (2,1)\n2. 第二行第三列 (2,3)\n3. 第一行第三列 (1,3)\n4. 第三行第三列 (3,3)",
+          },
+          {
+            id: "sub-15-2",
+            content: "## **第二题：几何直观 - 轴对称 (3星)**\n\n### 在如图所示的图形中，再给 **2 个** 格子涂上颜色，使涂色部分成为一个轴对称图形。一共有多少种不同的涂法？",
+            imageUrl: AXISYMMETRIC_3X4_IMAGE,
+            difficulty: 3,
+            solution: "## 【第一步：分析已有图形的特征】\n该图形是一个 3 列 4 行的矩形网络，已有 4 个蓝色格子，全部位于**中间第二列**（全满）。\n- 这说明现有的蓝色部分已经是针对垂直轴和水平轴完全对称的。\n- 我们现在要再选取 **2 个** 白色格子涂色，使最终完整的涂色部分构成一个轴对称图形。\n\n## 【第二步：确定可能存在的对称轴】\n由于这是一个非正方形的 3×4 矩形，其可能的对称轴只有两条：\n1. **垂直中线 (纵向对称轴)** —— 穿过第2列的中心。\n2. **水平中线 (横向对称轴)** —— 穿过第2行与第3行之间的中线。\n\n## 【第三步：讨论这两种对称方式下的独立涂法】\n\n### 情况 A：关于“垂直中线”对称\n要把 2 个新增格子涂色，使它们关于垂直中轴线对称。由于第二列已经全满，我们只能选择第一列和第三列中的格子，并且必须成对选择：一对关于一列对称的格子 is $(Row, 1)$ and $(Row, 3)$。\n- 行1可以选：(1,1) 和 (1,3)\n- 行2可以选：(2,1) 和 (2,3)\n- 行3可以选：(3,1) 和 (3,3)\n- 行4可以选：(4,1) 和 (4,3)\n\n这共有 **4** 种不同的两格涂法。每一组都可以保证图形具有纵向轴对称性。\n\n### 情况 B：关于“水平中线”对称\n要把 2 个新增格子涂色，使它们关于中间的横向中线对称。每一列需要两两对称：\n- 第一列关于横向中轴对称的配对有：\n  - 第一组：(1,1) 和 (4,1)\n  - 第二组：(2,1) 和 (3,1)\n- 第三列关于横向中轴对称的配对有：\n  - 第三组：(1,3) 和 (4,3)\n  - 第四组：(2,3) 和 (3,3)\n\n这共有 **4** 种不同的两格涂法（第一列2个或第三列2个）。每一组都可以保证图形具有横向轴对称性。\n\n## 【第四步：检查冲突与去重】\n情况 A 的 4 种方案均在**同一行**内选格（两个格子横向对称分布于中间列的两侧）。\n情况 B 的 4 种方案均在**同一列**内选格（两个格子纵向对称分布于水平中心线的两侧，同在第一列或同在第三列）。\n由于选择的方格集合没有任何交叉重合，所以这两类情况是完全独立的，没有重复计算的组合。\n\n## 【结论】\n一共有 $4 + 4 = 8$ 种不同的涂法。 (选项中选择 **A. 8**)",
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem15);
+      needsUpdate = true;
+    }
+
     if (needsUpdate) {
       // Sort by date descending
       updatedProblems.sort((a, b) => b.date.localeCompare(a.date));
@@ -768,11 +810,11 @@ export default function App() {
                         </div>
 
                         {prob.imageUrl && (
-                          <div className="mb-4 rounded-xl overflow-hidden border border-slate-100 shadow-sm max-w-xs">
+                          <div className="mb-4 flex">
                             <img
                               src={prob.imageUrl}
                               alt={`题目 ${index + 1} 图片`}
-                              className="w-full h-auto object-contain"
+                              className="max-h-36 w-auto object-contain rounded-lg"
                               referrerPolicy="no-referrer"
                             />
                           </div>
