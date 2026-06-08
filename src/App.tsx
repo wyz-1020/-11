@@ -56,6 +56,9 @@ const AXISYMMETRIC_3X4_IMAGE =
 const COUNTING_RODS_IMAGE =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDYwMCAyNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSIyNDAiIGZpbGw9IiNmZmZmZmYiIC8+CiAgPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iNTgwIiBoZWlnaHQ9IjIyMCIgcng9IjEyIiBmaWxsPSJub25lIiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iMiIgLz4KICAKICAmPCEtLSBSb3cgSGVhZGVycyAtLT4KICA8dGV4dCB4PSIzMCIgeT0iNzAiIGZvbnQtZmFtaWx5PSJTaW1IdWksIEFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjMzM0MTU1IiBmb250LXdlaWdodD0iYm9sZCI+57m15byPPC90ZXh0PgogIDx0ZXh0IHg9IjMwIiB5PSIxNTAiIGZvbnQtZmFtaWx5PSJTaW1IdWksIEFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjMzM0MTU1IiBmb250LXdlaWdodD0iYm9sZCI+5qKrlvI88L3RleHQ+CiAgCiAgPCEtLSBDb2x1bW4gTnVtYmVycyAtLT4KICA8ZyBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiM2NDc0OGIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPgogICAgPHRleHQgeD0iMTMwIiB5PSIyMTAiPjE8L3RleHQ+CiAgICA8dGV4dCB4PSIxODAiIHk9IjIxMCI+MjwvdGV4dD4KICAgIDx0ZXh0IHg9IjIzMCIgeT0iMjEwIj4zPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSIyMTAiPjQ8L3RleHQ+CiAgICA8dGV4dCB4PSIzMzAiIHk9IjIxMCI+NTwvdGV4dD4KICAgIDx0ZXh0IHg9IjM4MCIgeT0iMjEwIj42PC90ZXh0PgogICAgPHRleHQgeD0iNDMwIiB5PSIyMTAiPjc8L3RleHQ+CiAgICA8dGV4dCB4PSI0ODAiIHk9IjIxMCI+ODwvdGV4dD4KICAgIDx0ZXh0IHg9IjUzMCIgeT0iMjEwIj45PC90ZXh0PgogIDwvZz4KCiAgPCEtLSBWZXJ0aWNhbCBTdHlsZSAo57m15byPKSAxLTkgLS0+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CiAgICA8IS0tIDEgLS0+IDxsaW5lIHgxPSIxMzAiIHkxPSI0MCIgeDI9IjEzMCIgeTI9IjgwIiAvPgogICAgPCEtLSAyIC0tPiA8bGluZSB4MT0iMTc1IiB5MT0iNDAiIHgyPSIxNzUiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjE4NSIgeTE9IjQwIiB4Mj0iMTg1IiB5Mj0iODAiIC8+CiAgICA8IS0tIDMgLS0+IDxsaW5lIHgxPSIyMjAiIHkxPSI0MCIgeDI9IjIyMCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iMjMwIiB5MT0iNDAiIHgyPSIyMzAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjI0MCIgeTE9IjQwIiB4Mj0iMjQwIiB5Mj0iODAiIC8+CiAgICA8IS0tIDQgLS0+IDxsaW5lIHgxPSIyNjUiIHkxPSI0MCIgeDI9IjI2NSIgeTI9IjgwIiAvPiA8bGluZSB4MT0iMjc1IiB5MT0iNDAiIHgyPSIyNzUiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjI4NSIgeTE9IjQwIiB4Mj0iMjg1IiB5Mj0iODAiIC8+IDxsaW5lIHgxPSIyOTUiIHkxPSI0MCIgeDI9IjI5NSIgeTI9IjgwIiAvPgogICAgPCEtLSA1IC0tPiA8bGluZSB4MT0iMzEwIiB5MT0iNDAiIHgyPSIzMTAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjMyMCIgeTE9IjQwIiB4Mj0iMzIwIiB5Mj0iODAiIC8+IDxsaW5lIHgxPSIzMzAiIHkxPSI0MCIgeDI9IjMzMCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iMzQwIiB5MT0iNDAiIHgyPSIzNDAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjM1MCIgeTE9IjQwIiB4Mj0iMzUwIiB5Mj0iODAiIC8+CiAgICA8IS0tIDYgLS0+IDxsaW5lIHgxPSIzNjUiIHkxPSI0MCIgeDI9IjM5NSIgeTI9IjQwIiAvPiA8bGluZSB4MT0iMzgwIiB5MT0iNDAiIHgyPSIzODAiIHkyPSI4MCIgLz4KICAgIDwhLS0gNyAtLT4gPGxpbmUgeDE9IjQxNSIgeTE9IjQwIiB4Mj0iNDQ1IiB5Mj0iNDAiIC8+IDxsaW5lIHgxPSI0MjUiIHkxPSI0MCIgeDI9IjQyNSIgeTI9IjgwIiAvPiA8bGluZSB4MT0iNDM1IiB5MT0iNDAiIHgyPSI0MzUiIHkyPSI4MCIgLz4KICAgIDwhLS0gOCAtLT4gPGxpbmUgeDE9IjQ2NSIgeTE9IjQwIiB4Mj0iNDk1IiB5Mj0iNDAiIC8+IDxsaW5lIHgxPSI0NzAiIHkxPSI0MCIgeDI9IjQ3MCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iNDgwIiB5MT0iNDAiIHgyPSI0ODAiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjQ5MCIgeTE9IjQwIiB4Mj0iNDkwIiB5Mj0iODAiIC8+CiAgICA8IS0tIDkgLS0+IDxsaW5lIHgxPSI1MTUiIHkxPSI0MCIgeDI9IjU0NSIgeTI9IjQwIiAvPiA8bGluZSB4MT0iNTE4IiB5MT0iNDAiIHgyPSI1MTgiIHkyPSI4MCIgLz4gPGxpbmUgeDE9IjUyNiIgeTE9IjQwIiB4Mj0iNTI2IiB5Mj0iODAiIC8+IDxsaW5lIHgxPSI1MzQiIHkxPSI0MCIgeDI9IjUzNCIgeTI9IjgwIiAvPiA8bGluZSB4MT0iNTQyIiB5MT0iNDAiIHgyPSI1NDIiIHkyPSI4MCIgLz4KICA8L2c+CgogIDwhLS0gSG9yaXpvbnRhbCBTdHlsZSAo5qKrlvI8KSAxLTkgLS0+CiAgPGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CiAgICA8IS0tIDEgLS0+IDxsaW5lIHgxPSIxMTUiIHkxPSIxNTAiIHgyPSIxNDUiIHkyPSIxNTAiIC8+CiAgICA8IS0tIDIgLS0+IDxsaW5lIHgxPSIxNjUiIHkxPSIxNDUiIHgyPSIxOTUiIHkyPSIxNDUiIC8+IDxsaW5lIHgxPSIxNjUiIHkxPSIxNTUiIHgyPSIxOTUiIHkyPSIxNTUiIC8+CiAgICA8IS0tIDMgLS0+IDxsaW5lIHgxPSIyMTUiIHkxPSIxNDAiIHgyPSIyNDUiIHkyPSIxNDAiIC8+IDxsaW5lIHgxPSIyMTUiIHkxPSIxNTAiIHgyPSIyNDUiIHkyPSIxNTAiIC8+IDxsaW5lIHgxPSIyMTUiIHkxPSIxNjAiIHgyPSIyNDUiIHkyPSIxNjAiIC8+CiAgICA8IS0tIDQgLS0+IDxsaW5lIHgxPSIyNjUiIHkxPSIxMzUiIHgyPSIyOTUiIHkyPSIxMzUiIC8+IDxsaW5lIHgxPSIyNjUiIHkxPSIxNDUiIHgyPSIyOTUiIHkyPSIxNDUiIC8+IDxsaW5lIHgxPSIyNjUiIHkxPSIxNTUiIHgyPSIyOTUiIHkyPSIxNTUiIC8+IDxsaW5lIHgxPSIyNjUiIHkxPSIxNjUiIHgyPSIyOTUiIHkyPSIxNjUiIC8+CiAgICA8IS0tIDUgLS0+IDxsaW5lIHgxPSIzMTUiIHkxPSIxMzAiIHgyPSIzNDUiIHkyPSIxMzAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNDAiIHgyPSIzNDUiIHkyPSIxNDAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNTAiIHgyPSIzNDUiIHkyPSIxNTAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNjAiIHgyPSIzNDUiIHkyPSIxNjAiIC8+IDxsaW5lIHgxPSIzMTUiIHkxPSIxNzAiIHgyPSIzNDUiIHkyPSIxNzAiIC8+CiAgICA8IS0tIDYgLS0+IDxsaW5lIHgxPSIzODAiIHkxPSIxNDAiIHgyPSIzODAiIHkyPSIxNzAiIC8+IDxsaW5lIHgxPSIzNjUiIHkxPSIxNzAiIHgyPSIzOTUiIHkyPSIxNzAiIC8+CiAgICA8IS0tIDcgLS0+IDxsaW5lIHgxPSI0MzAiIHkxPSIxNDAiIHgyPSIzODAiIHkyPSIxNzAiIC8+IDwhLS0gV2FpdCwgNyBpcyAxIHZlcnRpY2FsIGFib3ZlLCAyIGhvcml6b250YWwgYmVsb3cgLS0+CiAgICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MzAsIDE1MCkiPgogICAgICA8bGluZSB4MT0iMCIgeTE9Ii0xMCIgeDI9IjAiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjEwIiB4Mj0iMTUiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyMCIgLz4KICAgIDwvZz4KICAgIDwhLS0gOCAtLT4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ4MCwgMTUwkiPgogICAgICA8bGluZSB4MT0iMCIgeTE9Ii0xMCIgeDI9IjAiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjEwIiB4Mj0iMTUiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjMwIiB4Mj0iMTUiIHkyPSIzMCIgLz4KICAgIDwvZz4KICAgIDwhLS0gOSAtLT4KICAgIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUzMCwgMTUwkiPgogICAgICA8bGluZSB4MT0iMCIgeTE9Ii0xMCIgeDI9IjAiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjEwIiB4Mj0iMTUiIHkyPSIxMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjIwIiB4Mj0iMTUiIHkyPSIyMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjMwIiB4Mj0iMTUiIHkyPSIzMCIgLz4KICAgICAgPGxpbmUgeDE9Ii0xNSIgeTE9IjQwIiB4Mj0iMTUiIHkyPSI0MCIgLz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg==";
 
+const MEASURING_CUP_IMAGE =
+  "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmOGZhZmMiIHJ4PSIxMiIgLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDAsIDEwMCkgcm90YXRlKDQ1KSI+PHBvbHlnb24gcG9pbnRzPSI1MCw1MCAtNTAsNTAgLTUwLDI1IDUwLC01MCIgZmlsbD0iI2NiZDVlMSIgc3Ryb2tlPSJub25lIiAvPjxsaW5lIHgxPSItNTAiIHkxPSIyNSIgeDI9Ii00MiIgeTI9IjI1IiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iMi41IiAvPjxsaW5lIHgxPSItNTAiIHkxPSIwIiB4Mj0iLTQyIiB5Mj0iMCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIuNSIgLz48bGluZSB4MT0iLTUwIiB5MT0iLTI1IiB4Mj0iLTQyIiB5Mj0iLTI1IiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iMi41IiAvPjxwb2x5Z29uIHBvaW50cz0iNTAsNTAgLTUwLDUwIC01MCwyNSA1MCwtNTAiIGZpbGw9IiM5M2M1ZmQiIG9wYWNpdHk9IjAuODUiIC8+PGxpbmUgeDE9IjUwIiB5MT0iLTUwIiB4Mj0iLTUwIiB5Mj0iMjUiIHN0cm9rZT0iIzFkNGVkOCIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgLz48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgLz48L2c+PC9zdmc+";
+
 export default function App() {
   const [problems, setProblems] = useState<MathProblem[]>([]);
   const [viewMode, setViewMode] = useState<ViewMode>("student");
@@ -104,6 +107,7 @@ export default function App() {
     const seed13Id = "seed-problem-13-v2"; // New challenge for May 19th
     const seed14Id = "seed-problem-14-v1"; // New challenge for May 20th
     const seed15Id = "seed-problem-15-v2"; // New challenge for May 26th
+    const seed16Id = "seed-problem-16-v1"; // New challenge for June 8th
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -149,6 +153,9 @@ export default function App() {
     );
     const hasSeed15 = currentProblems.some(
       (p) => p.id === seed15Id,
+    );
+    const hasSeed16 = currentProblems.some(
+      (p) => p.id === seed16Id,
     );
 
     let updatedProblems = [...currentProblems];
@@ -379,16 +386,10 @@ export default function App() {
         problems: [
           {
             id: "sub-11-1",
-            content: `### 阅读材料，解决问题\n\n**材料一**：我国古代曾用算筹表示数。在算筹记数法中，以纵式和横式两种方式表示数字。用算筹表示数的时候，个位用纵式，十位用横式，百位用纵式，千位用横式，以此类推，把小数部分降低一行表示小数，横竖间隔。例如，3.72 的表示方法如图 ① 所示。\n\n**材料二**：荷兰数学家斯蒂文系统地阐述了小数的理论，他用“①”“②”等符号表示小数点后不同的位数，比如把 3.72 写成 3①7②2。`,
-            imageUrl: "data:image/svg+xml;base64," + COUNTING_RODS_IMAGE,
-            difficulty: 5,
-            solution: `## 【第一步：分析算筹计数规律】\n根据算筹计数法（1-9）的用筹数量：\n- **1-5**：分别使用 1, 2, 3, 4, 5 根算筹。\n- **6-9**：分别使用 2, 3, 4, 5 根算筹（例如 6 是 1 纵 1 横共 2 根，9 是 1 纵 4 横共 5 根）。\n\n总结数字对应的算筹数：\n- 1: 1根 | 2: 2根 | 3: 3根 | 4: 4根 | 5: 5根\n- 6: 2根 | 7: 3根 | 8: 4根 | 9: 5根\n\n## 【第二步：根据材料二的符号表示】\n根据斯蒂文的表示法，小数点后第一位用 ①，第二位用 ②，以此类推：\n3.72 写作：**3①7②2**`,
-          },
-          {
-            id: "sub-11-2",
-            content: `**问题**：点点用 14 根算筹摆出了一个整数部分是一位数且一个零也不读的四位小数，这个小数最大是多少？并用材料二中的符号表示出来。`,
-            difficulty: 5,
-            solution: `## 【第一步：分析条件】\n1. **数位要求**：整数部分 1 位，小数部分 4 位，共 5 位数字。\n2. **限制条件**：总共使用 14 根算筹；一个零也不读（即每一位数字都不能是 0）。\n3. **目标**：求最大值。\n\n## 【第二步：推理过程】\n要使数值最大，应优先让高位数字尽可能大：\n- **整数部分**：尝试最大数字 **9**（使用 5 根），剩余 $14 - 5 = 9$ 根。\n- **十分位**：尝试最大数字 **9**（使用 5 根），剩余 $9 - 5 = 4$ 根。\n- **剩余三位**（百分位、千分位、万分位）：需要用 4 根算筹摆出 3 个非零数字。\n- 只有一种分配方案：2 根、1 根、1 根。\n- 对应数字：2 根可以是数字 **6** 或 **2**；1 根只能是数字 **1**。\n- 为了使数最大，百分位取 **6**，千分位和万分位取 **1**。\n\n组合数字：**9.9611**\n验证：$5 + 5 + 2 + 1 + 1 = 14$ 根，符合条件。\n\n## 【第三步：符号表示】\n根据斯蒂文的表示法：\n9.9611 写作：**9①9②6③1④1**\n\n## 【结论】\n这个小数最大是 **9.9611**，表示为 **9①9②6③1④1**。`,
+            content: `### 阅读材料，解决问题\n\n**材料一**：我国古代曾用算筹表示数。在算筹记数法中，以纵式和横式两种方式表示数字。\n用算筹表示数的时候，个位用纵式，十位用横式，百位用纵式，千位用横式，以此类推，把各个数位上的数表示出来。遇到零，则用空位表示。\n\n右图中：\n- **图①** 是算筹表示 1～9 的两种方式（纵式和横式）。\n- **图②** 是用算筹表示的一个三位数。\n\n请根据以上材料，填空并解答下面的问题：\n\n1. 图②表示的三位数是 **（       ）**。\n2. 如果在图②这三个数位中的某个数位上再多放一根算筹，能表示的最大三位数是 **（       ）**。`,
+            imageUrl: COUNTING_RODS_IMAGE,
+            difficulty: 4,
+            solution: `## 【第一步：解读图中的算筹表示法】\n根据材料，个位用**纵式**，十位用**横式**，百位用**纵式**。\n我们对照 **图①**：\n- **百位（纵式）**：有三根竖立的算筹，对照图①，这代表数字 **3**。\n- **十位（横式）**：一根竖算筹在左侧作为辅助线（或直接代表5），配合两根横算筹，即 $5 + 2 = 7$，对照图①中的横式 7，这代表数字 **7**。\n- **个位（纵式）**：两根竖立的算筹，对照图①，这代表数字 **2**。\n\n因此，图②表示的三位数是：**372**。\n\n## 【第二步：多放一根算筹后的最大数计算】\n题目要求在这三个数位中的**某个数位上再多放一根算筹**，并且要使得到的三位数**最大**。\n我们依次分析在每个数位上多放一根算筹可以变成哪些新数字：\n\n### 1. 如果在百位（当前为 3，纵式）多放一根算筹：\n此时百位共有 4 根算筹。在**纵式**表示法中，4 根算筹可以代表：\n- **4**（四根竖算筹）\n- **8**（一根横算筹放在上方代表 5，剩下三根竖算筹，共 4 根算筹，代表 $5 + 3 = 8$）\n因此，百位通过添加一根算筹可以使得当前数值从 3 变成 **4** 或 **8**。\n\n### 2. 如果在十位（当前为 7，横式）多放一根算筹：\n当前 7 是由 3 根算筹组成的（一根竖的代表 5，两根横的代表 2）。多放一根算筹后共有 4 根算筹。\n在**横式**表示法中，4 根算筹可以代表：\n- **4**（四根横算筹）\n- **8**（一根竖算筹放在左侧代表 5，剩下三根横算筹，共 4 根算筹，代表 $5 + 3 = 8$）\n因此，十位可以从 7 变成 **8**。\n\n### 3. 如果在个位（当前为 2，纵式）多放一根算筹：\n当前 2 是由 2 根竖算筹组成的。多放一根后共有 3 根算筹。\n在**纵式**表示法中，3 根算筹可以代表：\n- **3**（三根竖算筹）\n- **7**（一根横算筹在上方代表 5，两根竖算筹在下方，共 3 根算筹，代表 $5 + 2 = 7$）\n因此，个位可以从 2 变成 **3** 或 **7**。\n\n## 【第三步：比较并找出最大三位数】\n我们将各个可能形成的新数进行组合比较：\n- 改变百位（百位变 8）：可得到的最大数是 **872**\n- 改变十位（十位变 8）：可得到的数是 **382**\n- 改变个位（个位变 7）：可得到的最大数是 **377**\n\n比较可得，$872 > 377 > 382$，所以能表示的最大三位数是 **872**。\n\n## 【结论】\n1. 图②表示的数是 **372**；\n2. 增加一根算筹后能表示的最大三位数是 **872**。`,
           },
         ],
       };
@@ -396,18 +397,77 @@ export default function App() {
       needsUpdate = true;
     }
 
+    if (!hasSeed15) {
+      // Remove any old seed 15 versions to avoid duplicates
+      updatedProblems = updatedProblems.filter(
+        (p) => p.id !== "seed-problem-15-v1" && p.title !== "5月26日星级挑战"
+      );
+      const initialProblem15: MathProblem = {
+        id: seed15Id,
+        date: "2026-05-26",
+        title: "5月26日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 14000,
+        problems: [
+          {
+            id: "sub-15-1",
+            content: "## **第一题：图形的轴对称 (3星)**\n\n### 在下面的 3x3 图形中，再给 **1 个** 小方格涂上颜色，使涂色部分成为一个轴对称图形，一共有多少种不同的涂法？",
+            imageUrl: AXISYMMETRIC_3X3_IMAGE,
+            difficulty: 3,
+            solution: "## 【第一步：分析已有图形的对称性】\n观察给出的 3×3 网络图，已有 3 个蓝色格子。设行号为 1~3（从上到下），列号为 1~3（从左到右）：\n- 已二倍色位置：(1,1)，(2,2)，(3,1)\n- 该图形本身已经关于**水平中线**对称：(1,1) 与 (3,1) 互为对称点，(2,2) 位于中线上。\n\n## 【第二步：寻找新增 1 个格子使其轴对称的方案】\n轴对称图形的对称轴可以是：水平中线、垂直中线、主对角线、副对角线。我们分别尝试：\n\n1. **保持关于“水平中线”对称：**\n   新增的一个格子也必须落在线对称点上，或者自身位于对称轴上。\n   - 位于水平中在线的未涂色格子有：(2,1) 和 (2,3)。\n   - 如果涂色 **(2,1)**：图形具有水平对称轴（行1与行3对称，行2内部对称）。符合条件！\n   - 如果涂色 **(2,3)**：图形具有水平对称轴。符合条件！\n\n2. **使图形关于“主对角线（左上到右下）”对称：**\n   - 已有格子 (1,1) 和 (2,2) 已经在对角线上，只需让 (3,1) 的对称点 (1,3) 也被涂色。\n   - 如果涂色 **(1,3)**：整个图形将关于主对角线完美对称。符合条件！\n\n3. **使图形关于“副对角线（右上到左下）”对称：**\n   - 已有格子 (3,1) 和 (2,2) 已经在对角线上，只需让 (1,1) 的对称点 (3,3) 也被涂色。\n   - 如果涂色 **(3,3)**：整个图形将关于副对角线完美对称。符合条件！\n\n## 【结论】\n一共有 **4** 种不同的涂法，分别涂在以下网格位置：\n1. 第二行第一列 (2,1)\n2. 第二行第三列 (2,3)\n3. 第一行第三列 (1,3)\n4. 第三行第三列 (3,3)",
+          },
+          {
+            id: "sub-15-2",
+            content: "## **第二题：几何直观 - 轴对称 (3星)**\n\n### 在如图所示的图形中，再给 **2 个** 格子涂上颜色，使涂色部分成为一个轴对称图形。一共有多少种不同的涂法？",
+            imageUrl: AXISYMMETRIC_3X4_IMAGE,
+            difficulty: 3,
+            solution: "## 【第一步：分析已有图形的特征】\n该图形是一个 3 列 4 行的矩形网络，已有 4 个蓝色格子，全部位于**中间第二列**（全满）。\n- 这说明现有的蓝色部分已经是针对垂直轴 and 水平轴完全对称的。\n- 我们现在要再选取 **2 个** 白色格子涂色，使最终完整的涂色部分构成一个轴对称图形。\n\n## 【第二步：确定可能存在的对称轴】\n由于这是一个非正方形的 3×4 矩形，其可能的对称轴只有两条：\n1. **垂直中线 (纵向对称轴)** —— 穿过第2列的中心。\n2. **水平中线 (横向对称轴)** —— 穿过第2行与第3行之间的中线。\n\n## 【第三步：讨论这两种对称方式下的独立涂法】\n\n### 情况 A：关于“垂直中线”对称\n要把 2 个新增格子涂色，使它们关于垂直中轴线对称。由于第二列已经全满，我们只能选择第一列和第三列中的格子，并且必须成对选择：一对关于一列对称的格子 is $(Row, 1)$ and $(Row, 3)$。\n- 行1可以选：(1,1) 和 (1,3)\n- 行2可以选：(2,1) 和 (2,3)\n- 行3可以选：(3,1) 和 (3,3)\n- 行4可以选：(4,1) 和 (4,3)\n\n这共有 **4** 种不同的两格涂法。每一组都可以保证图形具有纵向轴对称性。\n\n### 情况 B：关于“水平中线”对称\n要把 2 个新增格子涂色，使它们关于中间的横向中线对称。每一列需要两两对称：\n- 第一列关于横向中轴对称的配对有：\n  - 第一组：(1,1) 和 (4,1)\n  - 第二组：(2,1) 和 (3,1)\n- 第三列关于横向中轴对称的配对有：\n  - 第三组：(1,3) 和 (4,3)\n  - 第四组：(2,3) 和 (3,3)\n\n这共有 **4** 种不同的两格涂法（第一列2个或第三列2个）。每一组都可以保证图形具有横向轴对称性。\n\n## 【第四步：检查冲突与去重】\n情况 A 的 4 种方案均在**同一行**内选格（两个格子横向对称分布于中间列的两侧）。\n情况 B 的 4 种方案均在**同一列**内选格（两个格子纵向对称分布于水平中心线的两侧，同在第一列或同在第三列）。\n由于选择的方格集合没有任何交叉重合，所以这两类情况是完全独立的，没有重复计算的组合。\n\n## 【结论】\n一共有 $4 + 4 = 8$ 种不同的涂法。 (选项中选择 **A. 8**)",
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem15);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed16) {
+      const initialProblem16: MathProblem = {
+        id: seed16Id,
+        date: "2026-06-08",
+        title: "6月8日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 15000,
+        problems: [
+          {
+            id: "sub-16-1",
+            content: "## **第一题：几何直观 - 倾斜量杯的容积 (2星)**\n\n### 右图中的方形量杯装满水，最多可装 **200 克**。现在将量杯倾斜，水面刚好如图所示。请问现在的量杯里有多少克水？\n\n*(注：杯壁上的刻度将杯口边缘平均分成 4 份)*",
+            imageUrl: MEASURING_CUP_IMAGE,
+            difficulty: 2,
+            solution: "## 【第一步：图形的对称原理分析】\n由于这是一个正方形容器，当我们把它倾斜 45 度放置时，其内部的空间可以通过对角线来进行巧妙的拆分：\n- **对角线 $BD$**（连接左、右两个顶点）将整个 200 克容量的正方形量杯平分成了上下两个完全相等的直角三角形：\n  - **下半部分（三角形 $ABD$）**：处于对角线之下，这部分完全装满了水。其容积为总容量的一半：\n    $$200\\text{ 克} \\div 2 = 100\\text{ 克}$$\n  - **上半部分（三角形 $BCD$）**：处于对角线之上。这部分的容积同样是总容量的一半，也就是 100 克。\n\n## 【第二步：对角线上部的水量分析】\n观察量杯的刻度与水面线：\n- 量杯的左上边缘 $CD$ 被 3 个刻度线平均平分成了 **4 个大小相等的区间**。\n- 水面线的一端落在对角线的右端点 $B$，另一端点刚好落在 $CD$ 边缘自下而上的**第一个刻度线**处（靠近 $D$ 点的第一个刻度 W）。\n\n由于连接顶点 $B$ 到边缘 $CD$ 分割点的线段将上半部分的三角形 $BCD$ 划分为了等高的小三角形：\n- 这些小三角形都共享顶点 $B$，因此它们关于 $CD$ 边缘的高度是完全一样的。\n- 它们的底边分别为 $CD$ 上的 4 等分段。底边相等、高相等，说明**这 4 个小三角形的面积（容积）是完全相等的**。\n- 每一等分小三角形代表的重量为：\n  $$100\\text{ 克} \\div 4 = 25\\text{ 克}$$\n\n## 【第三步：求总水量】\n根据水面线，现在量杯中的水包含了：\n1. **下部完美装满的完整三角形 $ABD$**：$100$ 克。\n2. **上部三角形中占了第一个等分的那个小三角形**：$25$ 克。\n\n所以，现在量杯中水的重量为：\n$$100\\text{ 克} + 25\\text{ 克} = 125\\text{ 克}$$\n\n## 【结论】\n现在的量杯里一共有 **125** 克水。",
+          },
+          {
+            id: "sub-16-2",
+            content: "## **第二题：经典应用题 - 鸡兔同笼变形 (3星)**\n\n### 100 个和尚吃 100 个馒头。大和尚一人吃 3 个，小和尚 3 人吃一个。大、小和尚各有多少人？",
+            imageUrl: null,
+            difficulty: 3,
+            solution: "## 【第一步：分析题意，明确关系】\n本题是一道经典应用题，可以通过列方程组或假设法（类似鸡兔同笼）来解答。\n- **总量关系 1**：大和尚人数 + 小和尚人数 = 100 人\n- **总量关系 2**：大和尚吃馒头数 + 小和尚吃馒头数 = 100 个\n- **吃馒头标准**：大和尚 $1 \\times 3 = 3$ 个；小和尚 3 人吃 1 个，即平均每人吃 $\\frac{1}{3}$ 个。\n\n## 【第二步：解法一 —— 假设法（鸡兔同笼思想）】\n假设这 100 个人**全部是小和尚**：\n- 1. 他们总共只能吃：\n  $$100 \\times \\frac{1}{3} = 33\\frac{1}{3}\\text{ 个馒头}$$\n- 2. 此时馒头数比实际少吃：\n  $$100 - 33\\frac{1}{3} = 66\\frac{2}{3}\\text{ 个馒头}$$\n- 3. 一个大和尚比一个小和尚多吃：\n  $$3 - \\frac{1}{3} = 2\\frac{2}{3}\\text{ 个馒头}$$\n- 4. 那么，大和尚的人数就是：\n  $$\\text{大和尚人数} = 66\\frac{2}{3} \\div 2\\frac{2}{3} = \\frac{200}{3} \\div \\frac{8}{3} = 25\\text{ 人}$$\n- 5. 小和尚的人数为：\n  $$\\text{小和尚人数} = 100 - 25 = 75\\text{ 人}$$\n\n## 【第三步：解法二 —— 列方程组法】\n设大和尚的人数为 $x$ 人，小和尚的人数为 $y$ 人：\n1. 根据人数：\n   $$x + y = 100 \\implies y = 100 - x$$\n2. 根据馒头数：\n   $$3x + \\frac{1}{3}y = 100$$\n\n将 $y = 100 - x$ 代入方程 2 中：\n$$3x + \\frac{100 - x}{3} = 100$$\n\n方程两边同时乘以 3：\n$$9x + (100 - x) = 300$$\n$$8x + 100 = 300$$\n$$8x = 200$$\n$$x = 25$$\n\n求出大和尚 $x = 25$ 人，则小和尚为：\n$$y = 100 - 25 = 75\\text{ 人}$$\n\n## 【第四步：代入验算】\n- 25 名大和尚，每人吃 3 个：$25 \\times 3 = 75$ 个馒头；\n- 75 名小和尚，每 3 人吃 1 个：$75 \\div 3 = 25$ 个馒头；\n- 馒头总数：$75 + 25 = 100$ 个；人总数：$25 + 75 = 100$ 口人。完全符合题意！\n\n## 【结论】\n大和尚有 **25** 人，小和尚有 **75** 人。",
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem16);
+      needsUpdate = true;
+    }
+
     if (!hasSeed12) {
       const initialProblem12: MathProblem = {
         id: seed12Id,
         date: "2026-05-12",
-        title: "5月12日星级挑战",
+        title: "5/12星级挑战",
         unlockTime: "14:00",
         createdAt: Date.now() + 11000,
         problems: [
           {
             id: "sub-12-1",
-            content:
-              "（1）甲乙两数的和是616，如果把甲数的小数点向右移动一位，那么得到的数与乙数相等。甲数是（       ），乙数是（          ）。",
+            content: "（1）甲、乙两数的和是616，如果把甲数的小数点向右移动一位，那么得到的数与乙数相等。甲数是（       ），乙数是（          ）。",
             difficulty: 3,
             solution: `## 【第一步：分析小数点移动规律】\n当一个小数的小数点向右移动一位时，这个数就扩大到原来的 **10 倍**。\n根据题意，把甲数的小数点向右移动一位后得到的数与乙数相等，说明：\n**乙数 = 甲数 × 10**\n\n## 【第二步：建立等量关系】\n已知甲乙两数的和是 616，我们可以用代数的方法来表示：\n设甲数为 $x$，则乙数为 $10x$。\n$x + 10x = 616$\n\n## 【第三步：求解方程】\n$11x = 616$\n$x = 616 \\div 11$\n$x = 56$\n\n既然甲数 $x = 56$，那么乙数就是：\n$56 \\times 10 = 560$\n\n## 【第四步：验证结果】\n$56 + 560 = 616$（符合和为 616 的条件）\n\n## 【结论】\n甲数是 **56**，乙数是 **560**。`,
           },
