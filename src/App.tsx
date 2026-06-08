@@ -108,6 +108,7 @@ export default function App() {
     const seed14Id = "seed-problem-14-v1"; // New challenge for May 20th
     const seed15Id = "seed-problem-15-v2"; // New challenge for May 26th
     const seed16Id = "seed-problem-16-v1"; // New challenge for June 8th
+    const seed17Id = "seed-problem-17-v2"; // New challenge for June 9th (v2 with two problems)
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -156,6 +157,9 @@ export default function App() {
     );
     const hasSeed16 = currentProblems.some(
       (p) => p.id === seed16Id,
+    );
+    const hasSeed17 = currentProblems.some(
+      (p) => p.id === seed17Id,
     );
 
     let updatedProblems = [...currentProblems];
@@ -454,6 +458,38 @@ export default function App() {
         ],
       };
       updatedProblems.push(initialProblem16);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed17) {
+      // Remove any old seed 17 versions to avoid duplicates
+      updatedProblems = updatedProblems.filter(
+        (p) => p.id !== "seed-problem-17-v1" && p.id !== "seed-problem-17-v2" && p.title !== "6月9日星级挑战"
+      );
+      const initialProblem17: MathProblem = {
+        id: seed17Id,
+        date: "2026-06-09",
+        title: "6月9日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 16000,
+        problems: [
+          {
+            id: "sub-17-1",
+            content: "## **第一题：鸡兔同笼变形 (3星)**\n\n### 笼子里有鸡和兔，一共有 **26 只脚**。\n### 后来又往笼子里放进若干只兔，并抓出同样多的鸡，这时笼子里有 **32 只脚**。\n\n### 问：后来放进了多少只兔？",
+            imageUrl: null,
+            difficulty: 3,
+            solution: "## 【第一步：分析“一进一出”的数量变化】\n题目中提到：**往笼子里放进若干只兔，并抓出同样多的鸡**。\n这意味着这是一次“兔进鸡出”的等额替换：\n- 每一组替换（**放进 1 只兔，同时抓出 1 只鸡**），笼子里动物的总只数不变。\n- 但是由于兔 and 鸡的脚数不同，每替换一次，笼子里的脚数会发生变化：\n  - 1 只兔有 **4 只脚**\n  - 1 只鸡有 **2 只脚**\n  - 每放进 1 只兔并抓出 1 只鸡，笼子里的脚数就会增加：\n    $$4\\text{ 只} - 2\\text{ 只} = 2\\text{ 只脚}$$\n\n## 【第二步：求出脚的总增加量】\n根据题意：\n- 初始脚的数量：**26 只**\n- 最终脚的数量：**32 只**\n- 笼子里脚数一共增加了：\n  $$32 - 26 = 6\\text{ 只脚}$$\n\n## 【第三步：求出放进兔子的数量】\n因为每进行一次“兔进鸡出”的替换，脚数就会多 2 只。\n现在一共多了 6 只脚，说明进行了：\n$$6\\text{ 只脚} \\div 2\\text{ 只脚/次} = 3\\text{ 次替换}$$\n\n既然进行了 3 次替换，也就是说后来放进了 **3 只兔**（同时也抓出了 3 只鸡）。\n\n## 【第四步：代入验算】\n我们可以验证是否存在符合初始条件（26只脚）且鸡的只数至少有3只（能够被抓出）的情况：\n- 假设最开始有 7 只鸡，3 只兔：\n  - 初始脚数：$7 \\times 2 + 3 \\times 4 = 14 + 12 = 26$ 只脚。符合条件！\n  - 后来抓出 3 只鸡（剩下 4 只），放进 3 只兔（变成 6 只）：\n    - 最终脚数：$4 \\times 2 + 6 \\times 4 = 8 + 24 = 32$ 只脚。完全符合条件！\n\n- 假设最开始有 9 只鸡，2 只兔：\n  - 初始脚数：$9 \\times 2 + 2 \\times 4 = 18 + 8 = 26$ 只脚。符合条件！\n  - 后来抓出 3 只鸡（剩下 6 只），放进 3 只兔（变成 5 只）：\n    - 最终脚数：$6 \\times 2 + 5 \\times 4 = 12 + 20 = 32$ 只脚。完全符合条件！\n\n因此，无论最开始的具体只数是多少（只要能满足初始 26 只脚且鸡不少于 3 只），结论都是唯一的。\n\n## 【结论】\n后来一共放进了 **3** 只兔。",
+          },
+          {
+            id: "sub-17-2",
+            content: "## **第二题：巧求未知数 (2星)**\n\n### 在下面的算式中，求出 **☆** 代表的数：\n\n### **$$48 - \\text{☆} \\div 8 = 40$$**\n\n### 问：**☆ = （       ）**",
+            imageUrl: null,
+            difficulty: 2,
+            solution: "## 【第一步：分析算式结构与运算顺序】\n观察算式：\n$$48 - \\text{☆} \\div 8 = 40$$\n\n根据有括号 and 乘除先算、加减后算的运算法则：\n我们可以把整个 **$\\text{☆} \\div 8$** 看作一个整体（也就是减数）。\n\n## 【第二步：求出被看作整体的减数部分】\n已知：$$\\text{被减数} - \\text{减数} = \\text{差}$$\n所以：$$\\text{减数} = \\text{被减数} - \\text{差}$$\n\n我们将对应的数值代入进行计算：\n$$\\text{☆} \\div 8 = 48 - 40$$\n$$\\text{☆} \\div 8 = 8$$\n\n## 【第三步：求出 ☆ 的值】\n已知：$$\\text{被除数} \\div \\text{除数} = \\text{商}$$\n所以：$$\\text{被除数} = \\text{商} \\times \\text{除数}$$\n\n也就是：\n$$\\text{☆} = 8 \\times 8$$\n$$\\text{☆} = 64$$\n\n## 【第四步：代入原式验算】\n我们将求出的 $\\text{☆} = 64$ 代入原式中进行检验：\n- 左边：$48 - 64 \\div 8 = 48 - 8 = 40$\n- 右边：$40$\n- 左右两边完美相等，证明计算答案完全正确！\n\n## 【结论】\n**☆ = 64**。",
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem17);
       needsUpdate = true;
     }
 
