@@ -59,6 +59,9 @@ const COUNTING_RODS_IMAGE =
 const MEASURING_CUP_IMAGE =
   "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNmOGZhZmMiIHJ4PSIxMiIgLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDAsIDEwMCkgcm90YXRlKDQ1KSI+PHBvbHlnb24gcG9pbnRzPSI1MCw1MCAtNTAsNTAgLTUwLDI1IDUwLC01MCIgZmlsbD0iI2NiZDVlMSIgc3Ryb2tlPSJub25lIiAvPjxsaW5lIHgxPSItNTAiIHkxPSIyNSIgeDI9Ii00MiIgeTI9IjI1IiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iMi41IiAvPjxsaW5lIHgxPSItNTAiIHkxPSIwIiB4Mj0iLTQyIiB5Mj0iMCIgc3Ryb2tlPSIjMzM0MTU1IiBzdHJva2Utd2lkdGg9IjIuNSIgLz48bGluZSB4MT0iLTUwIiB5MT0iLTI1IiB4Mj0iLTQyIiB5Mj0iLTI1IiBzdHJva2U9IiMzMzQxNTUiIHN0cm9rZS13aWR0aD0iMi41IiAvPjxwb2x5Z29uIHBvaW50cz0iNTAsNTAgLTUwLDUwIC01MCwyNSA1MCwtNTAiIGZpbGw9IiM5M2M1ZmQiIG9wYWNpdHk9IjAuODUiIC8+PGxpbmUgeDE9IjUwIiB5MT0iLTUwIiB4Mj0iLTUwIiB5Mj0iMjUiIHN0cm9rZT0iIzFkNGVkOCIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgLz48cmVjdCB4PSItNTAiIHk9Ii01MCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzMzNDE1NSIgc3Ryb2tlLXdpZHRoPSIzLjUiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgLz48L2c+PC9zdmc+";
 
+const GEOMETRY_PROOF_IMAGE =
+  "data:image/svg+xml;utf8,<svg width='450' height='300' viewBox='0 0 450 300' xmlns='http://www.w3.org/2000/svg'><rect width='450' height='300' fill='%23ffffff' /><path d='M 170 150 A 20 20 0 0 0 161.5 133.5' fill='none' stroke='%23334155' stroke-width='1.5' /><path d='M 100 250 A 20 20 0 0 0 91.5 233.5' fill='none' stroke='%23334155' stroke-width='1.5' /><path d='M 270 150 A 20 20 0 0 1 278.5 133.5' fill='none' stroke='%23334155' stroke-width='1.5' /><path d='M 340 250 A 20 20 0 0 1 348.5 233.5' fill='none' stroke='%23334155' stroke-width='1.5' /><line x1='220' y1='50' x2='80' y2='250' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><line x1='80' y1='250' x2='360' y2='250' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><line x1='360' y1='250' x2='220' y2='50' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><line x1='150' y1='150' x2='290' y2='150' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><circle cx='220' cy='50' r='3' fill='%23334155' /><circle cx='80' cy='250' r='3' fill='%23334155' /><circle cx='360' cy='250' r='3' fill='%23334155' /><circle cx='150' cy='150' r='3' fill='%23334155' /><circle cx='290' cy='150' r='3' fill='%23334155' /><text x='212' y='42' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23334155'>A</text><text x='58' y='260' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23334155'>B</text><text x='372' y='260' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23334155'>C</text><text x='128' y='156' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23334155'>D</text><text x='302' y='156' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23334155'>E</text><text x='176' y='142' font-family='Arial, sans-serif' font-size='16' font-weight='bold' fill='%23334155'>1</text><text x='256' y='142' font-family='Arial, sans-serif' font-size='16' font-weight='bold' fill='%23334155'>2</text></svg>";
+
 export default function App() {
   const [problems, setProblems] = useState<MathProblem[]>([]);
   const [viewMode, setViewMode] = useState<ViewMode>("student");
@@ -109,6 +112,7 @@ export default function App() {
     const seed15Id = "seed-problem-15-v2"; // New challenge for May 26th
     const seed16Id = "seed-problem-16-v1"; // New challenge for June 8th
     const seed17Id = "seed-problem-17-v2"; // New challenge for June 9th (v2 with two problems)
+    const seed18Id = "seed-problem-18-v1"; // New challenge for June 10th
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -160,6 +164,9 @@ export default function App() {
     );
     const hasSeed17 = currentProblems.some(
       (p) => p.id === seed17Id,
+    );
+    const hasSeed18 = currentProblems.some(
+      (p) => p.id === seed18Id,
     );
 
     let updatedProblems = [...currentProblems];
@@ -490,6 +497,31 @@ export default function App() {
         ],
       };
       updatedProblems.push(initialProblem17);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed18) {
+      // Remove any old seed 18 versions to avoid duplicates
+      updatedProblems = updatedProblems.filter(
+        (p) => p.id !== "seed-problem-18-v1" && p.title !== "6月10日星级挑战"
+      );
+      const initialProblem18: MathProblem = {
+        id: seed18Id,
+        date: "2026-06-10",
+        title: "6月10日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 17000,
+        problems: [
+          {
+            id: "sub-18-1",
+            content: "## **几何直观与证明 (3星)**\n\n### 右图中，已知 **$$\\angle 1 = \\angle \\text{B}$$**，那么 **$$\\angle 2$$** 一定等于 **$$\\angle \\text{C}$$**。\n\n### 请有理有据地说明 **$$\\angle 2 = \\angle \\text{C}$$** 的理由。",
+            imageUrl: GEOMETRY_PROOF_IMAGE,
+            difficulty: 3,
+            solution: "## 【第一步：分析已知条件，转化平行关系】\n观察右图中的位置关系：\n- 线段 $AB$ 和 $AC$ 可以看作是被其他直线截得的截线。\n- 角和直线的位置为：\n  - $\\angle 1$ (即 $\\angle ADE$) 与 $\\angle \\text{B}$ (即 $\\angle ABC$) 是直线 $DE$ 与 $BC$ 被直线 $AB$ 所截形成的**同位角**。\n\n根据题目给出的条件：\n$$\\angle 1 = \\angle \\text{B}$$\n\n利用平行线的判定定理：\n> **同位角相等，两直线平行**。\n\n我们可以得出结论：\n**$$DE \\parallel BC$$**（也就是说，直线 $DE$ 平行于直线 $BC$）\n\n## 【第二步：运用平行线性质，证明结论】\n我们已经推理出了 $DE$ 平行于 $BC$。现在以直线 $AC$ 作为截线来看：\n- $\\angle 2$ (即 $\\angle AED$) 与 $\\angle \\text{C}$ (即 $\\angle ACB$) 是直线 $DE$ 与 $BC$ 被直线 $AC$ 所截形成的**同位角**。\n\n根据平行线的性质定理：\n> **两直线平行，同位角相等**。\n\n既然直线 $DE \\parallel BC$，那么它们的同位角必然相等，即：\n$$\\angle 2 = \\angle \\text{C}$$\n\n## 【第三步：总结规范推导步骤】\n我们可以将以上证明步骤整理为：\n1. 因为 $\\angle 1 = \\angle \\text{B}$ （已知）\n2. 所以 $DE \\parallel BC$ （同位角相等，两直线平行）\n3. 所以 $\\angle 2 = \\angle \\text{C}$ （两直线平行，同位角相等）\n\n这就是 $\\angle 2 = \\angle \\text{C}$ 的完整证明依据。\n\n## 【结论】\n证明成立，$\\angle 2$ 一定等于 $\\angle \\text{C}$。",
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem18);
       needsUpdate = true;
     }
 
