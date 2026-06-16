@@ -62,6 +62,9 @@ const MEASURING_CUP_IMAGE =
 const GEOMETRY_PROOF_IMAGE =
   "data:image/svg+xml;utf8,<svg width='450' height='300' viewBox='0 0 450 300' xmlns='http://www.w3.org/2000/svg'><rect width='450' height='300' fill='%23ffffff' /><path d='M 170 150 A 20 20 0 0 0 161.5 133.5' fill='none' stroke='%23334155' stroke-width='1.5' /><path d='M 100 250 A 20 20 0 0 0 91.5 233.5' fill='none' stroke='%23334155' stroke-width='1.5' /><path d='M 270 150 A 20 20 0 0 1 278.5 133.5' fill='none' stroke='%23334155' stroke-width='1.5' /><path d='M 340 250 A 20 20 0 0 1 348.5 233.5' fill='none' stroke='%23334155' stroke-width='1.5' /><line x1='220' y1='50' x2='80' y2='250' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><line x1='80' y1='250' x2='360' y2='250' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><line x1='360' y1='250' x2='220' y2='50' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><line x1='150' y1='150' x2='290' y2='150' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><circle cx='220' cy='50' r='3' fill='%23334155' /><circle cx='80' cy='250' r='3' fill='%23334155' /><circle cx='360' cy='250' r='3' fill='%23334155' /><circle cx='150' cy='150' r='3' fill='%23334155' /><circle cx='290' cy='150' r='3' fill='%23334155' /><text x='212' y='42' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23334155'>A</text><text x='58' y='260' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23334155'>B</text><text x='372' y='260' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23334155'>C</text><text x='128' y='156' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23334155'>D</text><text x='302' y='156' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23334155'>E</text><text x='176' y='142' font-family='Arial, sans-serif' font-size='16' font-weight='bold' fill='%23334155'>1</text><text x='256' y='142' font-family='Arial, sans-serif' font-size='16' font-weight='bold' fill='%23334155'>2</text></svg>";
 
+const QUADRILATERAL_OUTER_ANGLES_IMAGE =
+  "data:image/svg+xml;utf8,<svg width='450' height='300' viewBox='0 0 450 300' xmlns='http://www.w3.org/2000/svg'><rect width='450' height='300' fill='%23ffffff' /><path d='M 284 68 A 22 22 0 0 0 258 93' fill='none' stroke='%23ea580c' stroke-width='2' /><path d='M 282 186 A 22 22 0 0 0 256 168' fill='none' stroke='%23ea580c' stroke-width='2' /><path d='M 164 232 A 22 22 0 0 0 182 206' fill='none' stroke='%23ea580c' stroke-width='2' /><path d='M 118 113 A 22 22 0 0 0 144 132' fill='none' stroke='%23ea580c' stroke-width='2' /><line x1='260' y1='190' x2='290' y2='40' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><line x1='280' y1='90' x2='90' y2='117' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><line x1='140' y1='110' x2='170' y2='260' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><line x1='160' y1='210' x2='310' y2='180' stroke='%23334155' stroke-width='2.5' stroke-linecap='round' /><text x='250' y='65' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23ea580c'>1</text><text x='292' y='162' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23ea580c'>2</text><text x='182' y='245' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23ea580c'>3</text><text x='102' y='145' font-family='Arial, sans-serif' font-size='18' font-weight='bold' fill='%23ea580c'>4</text><text x='40' y='260' font-family='Georgia, serif' font-style='italic' font-size='16' fill='%2364748b'>图 3</text></svg>";
+
 export default function App() {
   const [problems, setProblems] = useState<MathProblem[]>([]);
   const [viewMode, setViewMode] = useState<ViewMode>("student");
@@ -113,6 +116,7 @@ export default function App() {
     const seed16Id = "seed-problem-16-v1"; // New challenge for June 8th
     const seed17Id = "seed-problem-17-v2"; // New challenge for June 9th (v2 with two problems)
     const seed18Id = "seed-problem-18-v1"; // New challenge for June 10th
+    const seed19Id = "seed-problem-19-v1"; // New challenge for June 16th
 
     const hasSeed1 = currentProblems.some(
       (p) => p.id === seed1Id || p.title === "3月18日",
@@ -167,6 +171,9 @@ export default function App() {
     );
     const hasSeed18 = currentProblems.some(
       (p) => p.id === seed18Id,
+    );
+    const hasSeed19 = currentProblems.some(
+      (p) => p.id === seed19Id,
     );
 
     let updatedProblems = [...currentProblems];
@@ -522,6 +529,31 @@ export default function App() {
         ],
       };
       updatedProblems.push(initialProblem18);
+      needsUpdate = true;
+    }
+
+    if (!hasSeed19) {
+      // Remove any old seed 19 versions to avoid duplicates
+      updatedProblems = updatedProblems.filter(
+        (p) => p.id !== "seed-problem-19-v1" && p.title !== "6月16日星级挑战"
+      );
+      const initialProblem19: MathProblem = {
+        id: seed19Id,
+        date: "2026-06-16",
+        title: "6月16日星级挑战",
+        unlockTime: "14:00",
+        createdAt: Date.now() + 18000,
+        problems: [
+          {
+            id: "sub-19-1",
+            content: "## **几何与外角和定理 (3星)**\n\n### 在下图中，计算 **$$\\angle 1 + \\angle 2 + \\angle 3 + \\angle 4$$** 的度数和。\n\n### 问：**$$\\angle 1 + \\angle 2 + \\angle 3 + \\angle 4 = $$（       ）$$^\\circ$$**",
+            imageUrl: QUADRILATERAL_OUTER_ANGLES_IMAGE,
+            difficulty: 3,
+            solution: "## 【第一步：认识平面四边形的外角关系】\n观察右侧的几何图形，这是一个**凸四边形**（也就是有 4 条边、4 个顶点的闭合图形）：\n- 我们看到，在四边形的每个顶点处都将一条边进行了延长：\n  - $\\angle 1$ 是第一个标记的外角；\n  - $\\angle 2$ 是第二个标记的外角；\n  - $\\angle 3$ 是第三个标记的外角；\n  - $\\angle 4$ 是第四个标记的外角。\n- 这 4 个角刚好构成了这个四边形的一组 **外角**（即在每个顶点处各取一个外角）。\n\n---\n\n## 【第二步：应用“多边形外角和定理”】\n在小学与初中几何中，有一个非常经典且重要的几何常识：\n> **任意凸多边形的外角和都恒等于 $$360^\\circ$$**（无论这个多边形是有 3 条边、4 条边还是更多的边）。\n\n既然该图形是一个 4 边形，那么它的 4 个外角之和必为 $$360^\\circ$$：\n$$\\angle 1 + \\angle 2 + \\angle 3 + \\angle 4 = 360^\\circ$$\n\n---\n\n## 【第三步：利用内角和进行严密推导】\n为了确保人人都能理解，我们可以利用大家最熟悉的**“四边形内角和是 $$360^\\circ$$”**来进行计算推导：\n\n1. **四边形内角和：**\n   设这个四边形的 4 个内角分别为 $\\angle A, \\angle B, \\angle C, \\angle D$，因为是四边形，它们的和是：\n   $$\\angle A + \\angle B + \\angle C + \\angle D = (4 - 2) \\times 180^\\circ = 360^\\circ$$\n\n2. **相邻内角与外角的关系：**\n   每个顶点上的外角与它的内角拼在一起刚好是一条直线（平角为 $$180^\\circ$$）：\n   - $$\\angle 1 + \\angle A = 180^\\circ$$\n   - $$\\angle 2 + \\angle B = 180^\\circ$$\n   - $$\\angle 3 + \\angle C = 180^\\circ$$\n   - $$\\angle 4 + \\angle D = 180^\\circ$$\n\n3. **全部加在一起：**\n   将以上 4 个等式两边分别相加，得到：\n   $$(\\angle 1 + \\angle 2 + \\angle 3 + \\angle 4) + (\\angle A + \\angle B + \\angle C + \\angle D) = 180^\\circ \\times 4 = 720^\\circ$$\n\n4. **代入求值：**\n   因为我们已经知道 $$\\angle A + \\angle B + \\angle C + \\angle D = 360^\\circ$$，将其代入上式中：\n   $$(\\angle 1 + \\angle 2 + \\angle 3 + \\angle 4) + 360^\\circ = 720^\\circ$$\n   $$(\\angle 1 + \\angle 2 + \\angle 3 + \\angle 4) = 720^\\circ - 360^\\circ = 360^\\circ$$\n\n所以，无论是使用定理还是手动推导，结果都完全一致！\n\n---\n\n## 【结论】\n**$$360$$**。",
+          },
+        ],
+      };
+      updatedProblems.push(initialProblem19);
       needsUpdate = true;
     }
 
